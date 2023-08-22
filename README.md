@@ -8,7 +8,7 @@ __thewiseman__ - Anton
 adrianhauge - Adrian
 Magne#4204 - Magne
 teistgg - Terje M. 
-terjerudi - Terje R.
+terjerudi - Terje R., git username = Komledott
 
 ## kollaborasjonsverktøy og versjonskontroll
 
