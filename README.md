@@ -4,11 +4,11 @@
 ## kommunikasjonsverktøy
 
 Vi bruker discord som kommunikasjonsverktøy
-__thewiseman__ - Anton
-adrianhauge - Adrian
-Magne#4204 - Magne
-teistgg - Terje M. 
-terjerudi - Terje R., git username = Komledott
+- __thewiseman__ - Anton
+- adrianhauge - Adrian
+- Magne#4204 - Magne
+- teistgg - Terje M. 
+- <span style="font-family: monospace;color: green;">terjerudi</span> - Terje R., git username = Komledott
 
 ## kollaborasjonsverktøy og versjonskontroll
 
