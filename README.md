@@ -10,8 +10,18 @@ Magne#4204 - Magne
 teistgg - Terje M. 
 terjerudi - Terje R.
 
-## kollaborasjonsverktøy
+## kollaborasjonsverktøy og versjonskontroll
 
-Vi bruker Github til å samle filer og dokumenter. 
+Vi bruker Github til å samle filer og dokumenter og ha versjonskontroll på dem. 
 Anton oprettet konto, og alle brukerne må bli lagt til med rettigheter for å redigere filer. 
 
+## Kode
+
+Vi kan også legge inn kode, f.eks. javascript slik:
+```javascript
+
+setTimeout(function(){
+	alert('Heisann!')
+},1000)
+
+```
