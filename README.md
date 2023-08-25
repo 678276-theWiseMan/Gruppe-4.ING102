@@ -8,7 +8,7 @@ Vi bruker discord som kommunikasjonsverktøy
 - adrianhauge - Adrian
 - Magne#4204 - Magne
 - teistgg - Terje M. 
-- **terjerudi** - Terje R., Git username = Komledott
+- **terjerudi** - Terje R. (Git username = H-213065 eller Komledott)
 
 ## kollaborasjonsverktøy og versjonskontroll
 
