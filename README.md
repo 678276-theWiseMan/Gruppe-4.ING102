@@ -10,6 +10,7 @@ Vi bruker discord som kommunikasjonsverktøy
 - teistgg - Terje M. 
 - **terjerudi** - Terje R. (Git username = H-213065 eller Komledott)
 - 673498Kingowen - Nanthawat
+- Bbqbob - Vilhelm
 
 ## kollaborasjonsverktøy og versjonskontroll
 
