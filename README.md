@@ -27,3 +27,5 @@ setTimeout(function(){
 },1000)
 
 ```
+
+Testpush fra student rudi.
