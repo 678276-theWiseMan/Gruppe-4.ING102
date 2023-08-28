@@ -28,4 +28,4 @@ setTimeout(function(){
 
 ```
 
-Testpush fra student rudi.
+Testpush fra student-rudi. Ser ikke brukernavn under 'Blame' på github-sida.
