@@ -16,16 +16,3 @@ Vi bruker discord som kommunikasjonsverktøy
 
 Vi bruker Github til å samle filer og dokumenter og ha versjonskontroll på dem. 
 Anton oprettet konto, og alle brukerne må bli lagt til med rettigheter for å redigere filer. 
-
-## Kode
-
-Vi kan også legge inn kode, f.eks. javascript slik:
-```javascript
-
-setTimeout(function(){
-	alert('Heisann!')
-},1000)
-
-```
-
-Testpush fra student-rudi. Ser ikke brukernavn under 'Blame' på github-sida.
