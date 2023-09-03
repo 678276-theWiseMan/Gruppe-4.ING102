@@ -7,7 +7,6 @@ Vi bruker discord som kommunikasjonsverktøy
 - __thewiseman__ - Anton
 - adrianhauge - Adrian
 - Magne#4204 - Magne
-- teistgg - Terje M. 
 - **terjerudi** - Terje R. (Git username = H-213065 eller Komledott)
 - 673498Kingowen - Nanthawat
 - Bbqbob - Vilhelm
