@@ -1,9 +1,7 @@
 # Gruppe-4.ING102
 
+## Medlemmer:
 
-## kommunikasjonsverktøy
-
-Vi bruker discord som kommunikasjonsverktøy
 - __thewiseman__ - Anton
 - adrianhauge - Adrian
 - Magne#4204 - Magne
@@ -11,12 +9,20 @@ Vi bruker discord som kommunikasjonsverktøy
 - 673498Kingowen - Nanthawat
 - Bbqbob - Vilhelm
 
-## kollaborasjonsverktøy og versjonskontroll
+## Kollaborasjonsverktøy
+
+### Discord
+
+Vi bruker discord som kommunikasjonsverktøy
+
+### GitHub
 
 Vi bruker Github til å samle filer og dokumenter og ha versjonskontroll på dem. 
 Anton oprettet konto, og alle brukerne må bli lagt til med rettigheter for å redigere filer.
 
-## Markdown-til-HTML-parser
+## Andre verktøy
+
+### Markdown-til-HTML-parser
 
 Brukes for å konvertere markdown til HTML med stilark. HTML-siden kan skrives ut som PDF
 og vi monterer sammen alle PDF-ene som skal inn i oppgaveinnleveringen. Konverter her:
