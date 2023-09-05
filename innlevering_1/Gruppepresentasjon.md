@@ -18,7 +18,7 @@
 
 ### Medlem
 
-[Nanthawat](https://komledott.com/skole/prosjektgruppa/nanthawat.jpg)
+![Nanthawat](https://komledott.com/skole/prosjektgruppa/nanthawat.jpg)
 
 **Navn:** Nanthawat Dahl
 
