@@ -1,6 +1,8 @@
 ## Gruppepresentasjon
 
-### Prosjektleder 
+### Prosjektleder
+
+![Anton](https://komledott.com/skole/prosjektgruppa/anton.jpg)
 
 **Navn:** Anton Bogatchuk
 
@@ -9,6 +11,8 @@
 **Bakgrunn:** Blabla.
 
 ### Medlem
+
+![Terje](https://komledott.com/skole/prosjektgruppa/terje.jpg)
 
 **Navn:** Terje Rudi
 
@@ -28,6 +32,8 @@
 
 ### Medlem
 
+![Magne](https://komledott.com/skole/prosjektgruppa/magne.jpg)
+
 **Navn:** Magne Svalland
 
 **Alder:** 18
@@ -36,6 +42,8 @@
 
 ### Medlem
 
+![Vilhelm](https://komledott.com/skole/prosjektgruppa/vilhelm.jpg)
+
 **Navn:** Vilhelm Vilhelmsen
 
 **Alder:** 28
@@ -43,6 +51,8 @@
 **Bakgrunn:** Kokk
 
 ### Medlem
+
+![Adrian](https://komledott.com/skole/prosjektgruppa/adrian.jpg)
 
 **Navn:** Adrian Hauge
 
