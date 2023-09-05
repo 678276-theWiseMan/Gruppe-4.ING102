@@ -14,7 +14,7 @@
 
 **Alder:** 63
 
-**Bakgrunn:** Webutvikler
+**Bakgrunn:** Fagfotogtaf og webutvikler.
 
 ### Medlem
 
