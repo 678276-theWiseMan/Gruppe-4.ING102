@@ -18,7 +18,8 @@ Vi bruker discord som kommunikasjonsverktøy
 ### GitHub
 
 Vi bruker Github til å samle filer og dokumenter og ha versjonskontroll på dem. 
-Anton oprettet konto, og alle brukerne må bli lagt til med rettigheter for å redigere filer.
+
+Det er _viktig_ å _følge med_ hyppig på endringer som skjer. 
 
 ## Andre verktøy
 
