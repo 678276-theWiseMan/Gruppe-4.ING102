@@ -18,6 +18,8 @@
 
 ### Medlem
 
+![Nanthawat]([/path/to/img.jpg](https://komledott.com/skole/prosjektgruppa/nanthawat.jpg))
+
 **Navn:** Nanthawat Dahl
 
 **Alder:** 23
