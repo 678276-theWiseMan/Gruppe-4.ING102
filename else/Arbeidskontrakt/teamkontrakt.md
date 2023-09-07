@@ -42,13 +42,15 @@ Prosjektet har to hovedmål:
     - Enhver form for uenighet om beslutningstaking vil bli løst ved en demokratisk avstemning.
 
 
-____________________________                    ____________________________
-Anton Bogatchuk.                                Terje Rudi
 
+Anton Bogatchuk
 
-____________________________                    ____________________________
-Nanthawat Dahl                                  Magne Svalland
+Terje Rudi
 
+Nanthawat Dahl
 
-____________________________                    ____________________________
-Vilhelm Vilhelmsen                              Adrian Hauge
+Magne Svalland
+
+Vilhelm Vilhelmsen
+
+Adrian Hauge
