@@ -12,9 +12,11 @@ I web-/programvareutviklingsbransjen må utviklere ofte jobbe i grupper for å k
 #### 2.2 Prosjektmål
 Prosjektet har to hovedmål:
 - 2.21	Å lage en nettside for «KLEDELI» som vil inneholde en presentasjon av merkevaren og en liste over tjenester levert av selskapet.
-**Krav:** HTML, CSS og (valgfritt) Javascript.
+
+    **Krav:** HTML, CSS og (valgfritt) Javascript.
 - 2.22	Å lage en rapport for våre kunder - eierne av «KLEDELI» og / eller potensielle investorer.
-**Krav:** Markdown.
+
+    **Krav:** Markdown.
 #### 2.3 Ambisjonsnivå
 - 2.31 Det laveste akseptable resultatet er en pent strukturert og designet HTML + CSS-nettside der noen deler vil bli imitert ved å lage en ekstra, allerede fylt opp, side.
 
@@ -40,25 +42,13 @@ Prosjektet har to hovedmål:
     - Enhver form for uenighet om beslutningstaking vil bli løst ved en demokratisk avstemning.
 
 
-----                    ____________________________
-Anton Bogatchuk.        Terje Rudi
+____________________________                    ____________________________
+Anton Bogatchuk.                                Terje Rudi
 
 
-----
-Terje Rudi
+____________________________                    ____________________________
+Nanthawat Dahl                                  Magne Svalland
 
 
-----
-Nanthawat Dahl
-
-
-----
-Magne Svalland
-
-
-----
-Vilhelm Vilhelmsen
-
-
-----
-Adrian Hauge.
+____________________________                    ____________________________
+Vilhelm Vilhelmsen                              Adrian Hauge
