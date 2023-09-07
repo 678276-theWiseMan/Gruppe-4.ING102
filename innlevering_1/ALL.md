@@ -203,7 +203,7 @@ bilder og skriving av blogginnlegg
 
 **Alder:** 20
 
-**Bakgrunn:** Blah blah
+**Bakgrunn:** Litt bakgrunn innenfor python og vidergående prisen for innovasjon innenfor Ungdomsbedrift
 
 
 
