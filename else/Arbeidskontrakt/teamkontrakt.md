@@ -39,20 +39,26 @@ Prosjektet har to hovedmål:
 - 4.5 Beslutninger
     - Enhver form for uenighet om beslutningstaking vil bli løst ved en demokratisk avstemning.
 
-----
-Anton Bogatchuk.
+
+----                    ____________________________
+Anton Bogatchuk.        Terje Rudi
+
 
 ----
 Terje Rudi
 
+
 ----
 Nanthawat Dahl
+
 
 ----
 Magne Svalland
 
+
 ----
 Vilhelm Vilhelmsen
+
 
 ----
 Adrian Hauge.
