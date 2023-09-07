@@ -3,6 +3,7 @@
 ### Medlemmer
 
 **Prosjektleder:** Anton Bogatchuk.
+
 **Prosjektmedlemmer:** Terje Rudi, Nanthawat Dahl, Magne Svalland, Vilhelm Vilhelmsen, Adrian Hauge.
 
 ### Mål
@@ -26,14 +27,14 @@ Prosjektet har to hovedmål:
 
 - 3.1 Prosjektleder – organisering av møter, innlevering av rapporter, fordeling av arbeidsoppgaver. 
 - 3.2 Prosjektmedlem – webutvikling (skrive kode), rapportskriving.
-- 3.3 Verktøy – Discord, GitHub, VSCode,  Canvas.
+- 3.3 Verktøy – Discord, GitHub, VSCode, Canvas.
 
 #### 4. Relasjon og Prosedyrer
 - 4.1 Møtekultur:
     Møter er en viktig del av lærings- og utviklingsprosessen. De fleste møtene vil finne sted i HVL-bygget. Noen møter kan holdes i Discord, som er gruppens hoved kommunikasjonsverktøy. Datoen for hvert møte bestemmes på forrige møte og legges ut på Discord/Meetings-kanalen.
 - 4.2 Hvert medlem av gruppen forventes å være tilstede på hvert møte. Dersom et medlem ikke kan komme i tide, er det pliktig å gi beskjed i Discord/General-kanalen.
 - 4.3 Samarbeidsform:
-    I dette prosjektet vil alle oppgavene være likt fordelt mellom hvert prosjektmedlem. Det vil tillate hvert prosjektmedlem å utvikle sine personlige ferdigheter. Resultatet må lastes opp til vårt GitHub-repository, Gruppe-4.ING102, hvor alle andre medlemmer kan gi tilbakemelding om det.
+    I dette prosjektet vil alle oppgavene være likt fordelt mellom hvert prosjektmedlem. Det vil tillate hvert prosjektmedlem å utvikle sine personlige ferdigheter. Resultatet må lastes opp til vårt GitHub-repository, Gruppe-4.ING102, hvor alle andre medlemmer kan gi tilbakemelding om det. Medlemmene er også pliktet til å sjekke Discord èn gang til dagen.
 - 4.4 Avvik
     - 4.41 Hver endring i prosjektet vil bli lagt ut på Discord samt diskutert muntlig på et av møtene.
     - 4.42 Dersom et prosjektmedlem ikke oppfyller sine plikter, vil tilsvarende klage bli sendt til lærer.
