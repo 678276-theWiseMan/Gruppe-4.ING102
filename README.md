@@ -28,8 +28,8 @@ Det er _viktig_ å _følge med_ hyppig på endringer som skjer.
 Brukes for å konvertere markdown til HTML med stilark. HTML-siden kan skrives ut som PDF
 og vi monterer sammen alle PDF-ene som skal inn i oppgaveinnleveringen. Konverter her:
 
-- [Parser på HVL sin webserver](https://v.hvl.no/verktyg/parsedown/index.php).
+- [Parser på HVL sin webserver](https://v.hvl.no/verktyg/parsedown/index.php) (Husk å krysse av for at du ikke vil ha med headingen til HVL).
 
 - [Dillinger](https://dillinger.io) **MERK** `.io` _ikke_ `.com`.
 
-Husk å krysse av for at du ikke vil ha med headingen til HVL.
+
