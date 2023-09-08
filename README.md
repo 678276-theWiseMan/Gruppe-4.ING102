@@ -30,6 +30,6 @@ og vi monterer sammen alle PDF-ene som skal inn i oppgaveinnleveringen. Konverte
 
 - [Parser på HVL sin webserver](https://v.hvl.no/verktyg/parsedown/index.php) (Husk å krysse av for at du ikke vil ha med headingen til HVL).
 
-- [Dillinger](https://dillinger.io) **MERK** `.io` _ikke_ `.com`.
+- [Dillinger.io](https://dillinger.io) **MERK** `.io` _ikke_ `.com`.
 
 
