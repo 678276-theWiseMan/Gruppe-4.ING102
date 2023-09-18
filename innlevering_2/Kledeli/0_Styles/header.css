@@ -1,0 +1,65 @@
+body{ 
+margin:0;
+}
+
+header {
+    margin-top:10px;
+    height: 50px;
+    width: 100%;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.logo {
+    margin-top: 6px;
+    margin-left:10px;
+}
+
+.searchbar-div {
+    display:flex;
+    min-width: 10px;
+    width: 500px;
+    margin-left:10px;
+    margin-right:10px;
+
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.searchbar {
+    width: 100%;
+    margin-right:5px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.searchbar-div button {
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+header a:hover {
+    color:red;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+
+}
+
+header li {
+    margin-right:10px;
+}
