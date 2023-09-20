@@ -69,8 +69,10 @@ header li {
 }
 
 main{
-    position: absolute;
+
+    float:left;
     margin-top:60px;
     margin-left:10px;
+    margin-bottom:1500px;
 }
 
