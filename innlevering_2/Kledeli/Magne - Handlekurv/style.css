@@ -1,0 +1,55 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .boks {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .korg {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        .produkt {
+            display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 20px;
+
+        }
+
+        .produktbildet {
+         flex: 1;
+         margin-right: 10px;
+        }
+
+        .produkt img {
+            max-width: 200px;
+            height: auto;
+        }
+        .produktbildet div {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.produkttekst {
+    flex: 1;
+}
+    </style>
