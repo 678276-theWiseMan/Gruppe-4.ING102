@@ -3,7 +3,7 @@ margin:0;
 }
 
 header {
-    margin-top:0px;
+    margin-bottom:100px;
     height: 60px;
     width: 100%;
     border-bottom: solid grey 1px;
@@ -67,3 +67,10 @@ header ul {
 header li {
     margin-right:10px;
 }
+
+main{
+    position: absolute;
+    margin-top:60px;
+    margin-left:10px;
+}
+
