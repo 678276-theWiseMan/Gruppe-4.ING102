@@ -2,6 +2,7 @@ body{
 margin:0;
 }
 
+
 header {
     margin-bottom:100px;
     height: 60px;
@@ -72,7 +73,7 @@ main{
     float:left;
     width:100%;
     margin-top:60px;
-    margin-left:10px;
+    margin-left:20px;
 }
 
 aside {
@@ -83,4 +84,9 @@ footer {
     float:left;
     width:100%;
 }
+
+figure {
+    margin-left: 0px;
+}
+
 
