@@ -1,0 +1,86 @@
+body{ 
+margin:0;
+}
+
+header {
+    margin-bottom:100px;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    border-bottom: solid grey 1px;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left:10px;
+}
+
+.searchbar-div {
+    display:flex;
+    min-width: 10px;
+    width: 500px;
+    margin-left:10px;
+    margin-right:10px;
+    height:40px;
+
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.searchbar {
+    width: 100%;
+    max-width: 400px;
+    margin-right:5px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.searchbar-div button {
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+header a:hover {
+    color:red;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+
+}
+
+header li {
+    margin-right:10px;
+}
+
+main{
+
+    float:left;
+    width:100%;
+    margin-top:60px;
+    margin-left:10px;
+}
+
+aside {
+    float:left;
+    width:100%;
+}
+footer {
+    float:left;
+    width:100%;
+}
+
