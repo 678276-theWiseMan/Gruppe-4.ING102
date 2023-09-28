@@ -4,6 +4,8 @@ Budsjettet inkluderer forventede kostnader for utvikling og produksjon av nettst
 Andre sannsynlige kostnader som f.eks. **_markedsføring og promotering_**, 
 **_juridiske avklaringer_** og **_tredjpartstjenester_** er ikke tatt med.
 
+#### _Utviklingsbudsjett_
+
 | Kostnadskategori           | Min. estimert kostnad        | Maks. estimert kostnad |
 |----------------------------|------------------------------|--------------------------------|
 | Lønnskostnader             |                              |                                |
@@ -28,7 +30,7 @@ Andre sannsynlige kostnader som f.eks. **_markedsføring og promotering_**,
 | Dokumentasjon og Opplæring | 10 000 kr                    | 30 000 kr                      |
 | Totalt Budsjett            |                              |                                |
 
-#### Prognose for inntektsstrøm etter lansering
+#### _Prognose for inntektsstrøm etter lansering_
 
 Anta at inntekten kommer hovedsakelig fra leieavgifter for barnetøy.
 
@@ -40,17 +42,13 @@ Anta at inntekten kommer hovedsakelig fra leieavgifter for barnetøy.
 
 **Kostnader etter lansering:**
 
-Anta at kostnadene inkluderer lønnskostnader, driftskostnader, markedsføringsutgifter og vedlikeholdsutgifter. Her er et estimat:
+Kostnadene inkluderer lønnskostnader, driftskostnader, markedsføringsutgifter og vedlikeholdsutgifter. Estimat:
 
 - År 1: 400 000 kr
 - År 2: 450 000 kr
 - År 3: 500 000 kr
 - År 4: 550 000 kr
 - År 5: 600 000 kr
-
-Nå kan vi bruke nåverdimetoden til å evaluere lønnsomheten for de kommende fem årene. For dette beregner vi netto nåverdi (NPV) ved hjelp av en internrente (IRR) på 15%. Dette gir oss en oversikt over hvor lønnsomt prosjektet er gitt den angitte diskonteringsrenten.
-
-Her er beregningene:
 
 **År 1:**
 - Netto kontantstrøm: Inntekt - Kostnad = 300 000 kr - 400 000 kr = -100 000 kr
@@ -72,10 +70,7 @@ Her er beregningene:
 - Netto kontantstrøm: 1 100 000 kr - 600 000 kr = 500 000 kr
 - NPV_5 = 500 000 kr / (1 + 0.15)⁵ = 500 000 kr / 1.998390140625 = 250 257 kr (avrundet)
 
-Nå kan du summere NPV-verdiene for hvert år for å få den totale nåverdien av prosjektet:
-
 NPV_total = NPV_1 + NPV_2 + NPV_3 + NPV_4 + NPV_5 = -86 956 kr + 37 778 kr + 131 408 kr + 200 000 kr + 250 257 kr = 532 487 kr
 
 Med en internrente på 15%, vil prosjektet være lønnsomt med en total nåverdi på 532 487 kr. Dette indikerer at prosjektet forventes å generere en positiv avkastning over de kommende fem årene.
-
 
