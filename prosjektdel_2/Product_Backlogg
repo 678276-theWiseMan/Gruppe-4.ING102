@@ -2,9 +2,8 @@ Product backlogg
 
 # US-1 -Bruker
 TITTEL - Oversikt
-**Ønsker jeg å ...** å en generell oversikt over KLEDELI og hvilke produkter og tjenesten
-som tilbys
-**Slik at jeg ...** kan vurdere om jeg skal registrere meg for et medlemskap.
+**Ønsker jeg å ...** å en generell oversikt over KLEDELI og hvilke produkter og tjenester som tilbys
+**Slik at jeg ...** kan bestemme om jeg vil ha medlemskap
 ----------------------------------------------
 AkseptanseKriterier:
 -Egen side for produkter 
@@ -15,8 +14,7 @@ Prioritet: - Høy -
 ----------------------------------------------
 ## US-2 - Bruker
 TITTEL - Inn og ut-Levering
-**Ønsker jeg å ...** få en generell oversikt over de ulike ut og innleveringsstedene for
-forsendelser.
+**Ønsker jeg å ...** få en generell oversikt over de ulike ut og inn og utleveringstedene
 **Slik at jeg ...** vet hvor de er og hvordan jeg kan komme meg dit fra der jeg bor.
 ----------------------------------------------
 AkseptanseKriterier: Frakt og innleverings alternativer, fortalt før man blir en kunde og mens man har i handlekurv
@@ -26,20 +24,19 @@ prioritet: - Høy -
 ----------------------------------------------
 ###	US-3 - Bruker
 TITTEL - Beskrivelser 
-**Ønsker jeg å ...** få en generell oversikt over de ulike ut og innleveringsstedene for
-forsendelser.
-**Slik at jeg ...** vet hvor de er og hvordan jeg kan komme meg dit fra der jeg bor.
+**Ønsker jeg å ...**  Få beskrivelser over plagg
+
+**Slik at jeg ...** vite hva jeg vil ha 
 ----------------------------------------------
-AkseptanseKriterier:Detaljer på plagg og en produktside over utvalg
+AkseptanseKriterier: Detaljer på plagg og en produktside over utvalg
 
 estimat:4t
 prioritet: - Medium -
 ----------------------------------------------
 #### US-4 - Bruker
 TITTEL - Medlemskap
-**Ønsker jeg å ...** få en generell oversikt over de ulike ut og innleveringsstedene for
-forsendelser.
-**Slik at jeg ...** vet hvor de er og hvordan jeg kan komme meg dit fra der jeg bor.
+**Ønsker jeg å ...** Ha oversikt over medlemskap
+**Slik at jeg ...** Hva det koster meg og være en del av KLEDELI
 ----------------------------------------------
 AkseptanseKriterier:- forskjellige medlemskapene stående klart hvert for seg, med differanser skrevet inn
 
