@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Styles/header.css">
+    <link rel="stylesheet" href="../../Styles/varelistevisning.css">
     <title>Varelistevisning</title>
 </head>
+
 <body>
+    <script src="../../pages/02.Varelistevisning/Varelistevisning.js"></script>
     <header>
         <h1 class="logo box1"><a href="../00.Hovedside/hovedside.html">KLEDELI</a></h1>
         <div class="searchbar-div">
@@ -25,9 +28,10 @@
         </nav>
     </header>
 
+
     <main>
         <section class="produktvisning">
-            <h3>Produkter</h3>
+            <h2>Produkter</h2>
             
             <figure class="produktGrid">
                 <a href="../03.Varedetalj/varedetalj.html">
@@ -36,7 +40,7 @@
                         <h4>Produkt 1</h4>
                     </figcaption>
                 </a>
-                <button>Legg i handlekurven</button>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
             </figure>
 
             <figure class="produktGrid">
@@ -46,7 +50,7 @@
                         <h4>Produkt 2</h4>
                     </figcaption>
                 </a>
-                <button>Legg i handlekurven</button>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
             </figure>
 
             <figure class="produktGrid">
@@ -56,7 +60,7 @@
                         <h4>Produkt 3</h4>
                     </figcaption>
                 </a>
-                <button>Legg i handlekurven</button>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
             </figure>
         </section>
     </main>
@@ -68,5 +72,7 @@
     		<li><a href="../08.Erklæringer/tilgjengelighetserklaering.html">Tilgjengelighetserkæring</a></li>
     	</ul>
     </footer>
+
+    <script src="../../pages/02.Varelistevisning/Varelistevisning.js"></script>
 </body>
 </html>
