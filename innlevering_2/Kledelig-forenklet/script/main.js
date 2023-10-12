@@ -1,0 +1,1 @@
+console.info('Dette scriptet kan trigge andre script, alt ettersom hvilken side man er på.');

@@ -1,0 +1,80 @@
+:root {
+  --headingFonts: Tahoma,sans-serif;
+  --standardText: Arial,Helvetica,sans-serif;
+  /* Bruk HSL-farger! Det vil komme til nytte siden. */
+  --toneDark: hsl(111,25%,87%);
+  --toneNav: hsl(185,89%,16%);
+  --toneNavShade: hsl(105,89%,16%);
+  --toneBright:  hsl(185,11%,95%);
+  --toneSunny:  hsl(64,36%,96%);
+  --toneWarm:  hsl(354,21%,90%);
+  --toneWarmDark:  hsl(354,63%,60%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--standardText);
+  background: var(--toneBright);
+}
+h1, h2, h3, h4, h5, h6 {font-family: var(--headingFonts);color: var(--toneWarmDark)}
+a {color: var(--toneNav);}
+button {
+  padding: .6rem;
+  border-radius: .3rem;
+  color: white;
+  background: linear-gradient(var(--toneNavShade),var(--toneNav));
+  border: none;
+  box-shadow: .1rem .1rem .6rem rgba(0,0,0,.2);
+  
+}
+input {
+  min-width: 12rem;
+}
+
+/* Header (+ Footer) Core */
+
+header, footer {
+  margin: 0;
+  background: var(--toneDark);
+  position: relative;
+  width: 100%;
+  padding: .4rem 1.4rem;
+  /*display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+}
+header .searchbar-div {
+  position: absolute;
+  top: 1.4rem;
+  right: 3.4rem;
+}
+header a {text-decoration: none;}
+nav.header-nav ul {display: flex;}
+nav.header-nav li {margin-right: 1.4rem;list-style-type: none;}
+
+nav a.active {font-weight: bold;border-bottom: solid 2px var(--toneWarmDark)}
+/* MERK: Klassen shadow er tenkt for meny-elementer som ikke skal vises i menyen: */
+nav li.shadow a {color: white;font-family: monospace;font-size: .6rem;}
+nav li.shadow a:before {content: "[";}
+nav li.shadow a:after {content: "]";}
+nav li.shadow a:hover {font-size: 1rem;color: maroon;background: yellow;}
+
+/* Main Core */
+
+main {
+  margin: 0 auto;
+  width: clamp(20rem,100%,48rem);
+  border: dotted 1px var(--toneWarm);
+}
+
+/* Footer Core */
+footer {
+  position: absolute;
+  bottom: 0;
+  background: var(--toneWarmDark);
+}
+footer a {
+  color: var(--toneBright);
+  text-decoration: none;
+}

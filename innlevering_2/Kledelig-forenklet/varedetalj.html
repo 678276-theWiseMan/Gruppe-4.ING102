@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/combined.css">
+    <script src="script/main.js" type="module"></script>
+    <title>Varedetalj</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo box1"><a href="index.html">KLEDELI</a></h1>
+        <div class="searchbar-div">
+            <input class="searchbar" type="search" placeholder="Søk">
+            <button>Search</button>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="kategorier.html">Kategorier</a></li>
+                <li><a href="registrering.html">Registrer Deg</a></li>
+                <li><a href="dinkonto.html">Din Konto</a></li>
+                <li><a href="omoss.html">Om Oss</a></li>
+                <li><a href="handlekurv.html">Handlekurv</a></li>
+                <li class="shadow"><a class="active" href="varedetalj.html">Varedetalj</a></li>
+                <li class="shadow"><a href="varelistevisning.html">Varelistevisning</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produktDetalj">
+            <figure>
+                <img src="grafikk/detalj.gif" alt="Produkt 1">
+            </figure>
+            <div class="text-container">
+                <figcaption>
+                    <h3>Produkt 1</h3>
+                    <p>tom</p>
+                </figcaption>
+                <section class="størrelseUtvalg">
+                    <label for="størrelse">Velg en størrelse:</label>
+                    <select id="størrelse" name="størrelse">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="x-large">X-Large</option>
+                    </select>
+                </section>
+                <button>Legg til handlevogn</button>
+            </div>
+        </section>
+
+        <section class="anbefaling">
+            <h3>Anbefalte Produkter</h3>
+
+            <figure class="produktGrid">
+                <a href="produkt1.html">
+                <img src="grafikk/forhandstitt.gif" alt="Produkt 2" width="300" height="380">
+                <figcaption>
+                    <h4>Produkt 2</h4>
+                </figcaption>
+                </a>
+            </figure>
+
+            <figure class="produktGrid">
+                <a href="produkt1.html">
+                <img src="grafikk/forhandstitt.gif" alt="Produkt 3" width="300" height="380">
+                <figcaption>
+                    <h4>Produkt 3</h4>
+                </figcaption>
+                </a>
+            </figure>
+        </section>
+    </main>
+
+    <aside></aside>
+    <footer>
+    	<ul>
+    		<li><a href="kontakt/personvernerklaering.html">Personvernerkæring</a></li>
+    		<li><a href="kontakt/tilgjengelighetserklaering.html">Tilgjengelighetserkæring</a></li>
+    	</ul>
+    </footer>
+</body>
+</html>

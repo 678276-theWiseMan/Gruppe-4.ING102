@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/combined.css">
+    <script src="script/main.js" type="module"></script>
+    <title>Varelistevisning</title>
+</head>
+
+<body>
+    <script src="../../pages/02.Varelistevisning/Varelistevisning.js"></script>
+    <header>
+        <h1 class="logo box1"><a href="index.html">KLEDELI</a></h1>
+        <div class="searchbar-div">
+            <input class="searchbar" type="search" placeholder="Søk">
+            <button>Search</button>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="kategorier.html">Kategorier</a></li>
+                <li><a href="registrering.html">Registrer Deg</a></li>
+                <li><a href="dinkonto.html">Din Konto</a></li>
+                <li><a href="omoss.html">Om Oss</a></li>
+                <li><a href="handlekurv.html">Handlekurv</a></li>
+                <li class="shadow"><a href="varedetalj.html">Varedetalj</a></li>
+                <li class="shadow"><a class="active" href="varelistevisning.html">Varelistevisning</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="produktvisning">
+            <h2>Produkter</h2>
+            
+            <figure class="produktGrid">
+                <a href="../03.Varedetalj/varedetalj.html">
+                    <img src="grafikk/forhandstitt.gif" alt="Produkt 1" width="300" height="380">
+                    <figcaption>
+                        <h4>Produkt 1</h4>
+                    </figcaption>
+                </a>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+            </figure>
+
+            <figure class="produktGrid">
+                <a href="../03.Varedetalj/varedetalj.html" >
+                    <img src="grafikk/forhandstitt.gif" alt="Produkt 2" width="300" height="380">
+                    <figcaption>
+                        <h4>Produkt 2</h4>
+                    </figcaption>
+                </a>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+            </figure>
+
+            <figure class="produktGrid">
+                <a href="../03.Varedetalj/varedetalj.html">
+                    <img src="grafikk/forhandstitt.gif" alt="Produkt 3" width="300" height="380">
+                    <figcaption>
+                        <h4>Produkt 3</h4>
+                    </figcaption>
+                </a>
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+            </figure>
+        </section>
+    </main>
+
+    <aside></aside>
+    <footer>
+    	<ul>
+    		<li><a href="kontakt/personvernerklaering.html">Personvernerkæring</a></li>
+    		<li><a href="kontakt/tilgjengelighetserklaering.html">Tilgjengelighetserkæring</a></li>
+    	</ul>
+    </footer>
+</body>
+</html>
