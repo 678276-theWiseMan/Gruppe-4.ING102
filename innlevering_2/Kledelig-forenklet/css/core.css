@@ -65,7 +65,10 @@ nav li.shadow a:hover {font-size: 1rem;color: maroon;background: yellow;}
 main {
   margin: 0 auto;
   width: clamp(20rem,100%,48rem);
-  border: dotted 1px var(--toneWarm);
+  border: dotted 1px var(--toneWarmDark);
+  padding: 0 .8rem;
+  border-top: none;
+  border-bottom: none;
 }
 
 /* Footer Core */
