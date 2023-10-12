@@ -1,0 +1,1 @@
+# Forklaring til forenklet versjon
