@@ -24,3 +24,6 @@ Jeg mener jeg har satt inn farger som er tiltaende, men dette får vi avgjøre p
 
 Merk at jeg har skrevet farger i __HSL__ formatet øverst i `:root`i `core.css`! Dette vil hjelpe oss når vi etterhvert skal lage *forløpningsfarger* og ønsker å beholde nok kontrast i forhold til *universell utforming*.
 
+### Logo
+
+Opprettet *SVG-fil* for logo. originalen kommer fra Adobe Illustrator og bør ev. endres der. Fordelen med svg-formatet er at det er *oppløsningsuavhengig* og lettvektig m.h.t. båndbredde.
