@@ -51,6 +51,7 @@ header .searchbar-div {
 }
 header a {text-decoration: none;}
 header a:hover {font-weight: bold;}
+header h1.logo img {width: clamp(3rem,100%,9rem);height: auto;}
 nav.header-nav ul {display: flex;}
 nav.header-nav li {margin-right: 1.4rem;list-style-type: none;}
 
