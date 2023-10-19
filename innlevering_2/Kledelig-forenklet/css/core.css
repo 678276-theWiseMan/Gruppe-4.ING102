@@ -50,17 +50,19 @@ header .searchbar-div {
   right: 3.4rem;
 }
 header a {text-decoration: none;}
-header a:hover {font-weight: bold;}
+header a:hover {font-weight: bold;border-bottom: dotted 2px var(--toneWarmDark);padding-bottom: .3rem;}
 header h1.logo img {width: clamp(3rem,100%,9rem);height: auto;}
 nav.header-nav ul {display: flex;}
 nav.header-nav li {margin-right: 1.4rem;list-style-type: none;}
 
-nav a.active {font-weight: bold;border-bottom: solid 2px var(--toneWarmDark)}
+nav a.active {font-weight: bold;border-bottom: solid 2px var(--toneWarmDark);padding-bottom: .3rem;}
 /* MERK: Klassen shadow er tenkt for meny-elementer som ikke skal vises i menyen: */
-nav li.shadow a {color: white;font-family: monospace;font-size: .6rem;}
+nav li.shadow {background: white;padding: .2rem;border-radius: .2rem;}
+nav li.shadow a {color: darkgreen;font-family: monospace;font-size: .8rem;}
 nav li.shadow a:before {content: "[";}
 nav li.shadow a:after {content: "]";}
 nav li.shadow a:hover {font-size: 1rem;color: maroon;background: yellow;}
+nav li.shadow a:hover:before {content: "[Skal skjules: ";}
 
 /* Main Core */
 
@@ -79,7 +81,19 @@ footer {
   bottom: 0;
   background: var(--toneWarmDark);
 }
+footer ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+footer li {
+	margin-right: 1.4rem;
+}
 footer a {
+  background: linear-gradient(var(--toneNavShade),var(--toneNav));
+  padding: .6rem .4rem;
+  border-radius: .3rem;
   color: var(--toneBright);
   text-decoration: none;
 }
