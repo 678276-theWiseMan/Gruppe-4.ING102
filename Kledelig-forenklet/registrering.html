@@ -33,8 +33,8 @@
 
     <main>
         <article>
-            <form onsubmit="alert('Klar for funksjon: ' + lastName.value + ' ' + firstName.value + ' ' + userName.value + ' ' + password.value + ' ' + passwordConfirmed.value)">
-                <fieldset><legend>Personalia</legend>
+            <form onsubmit="alert('Klar for funksjon: ' + lastName.value + ' ' + firstName.value + ' ' + userName.value + ' ' + password.value + ' ' + passwordConfirmed.value);this.innerHTML='<h2>Takk!</h2>';return false;">
+               <fieldset><legend>Personalia</legend>
 					<p><label>Etternavn</label> <input type="text" id="lastName" placeholder="F.eks. Olsen"></p>
 					<p><label>Fornavn</label> <input type="text" id="firstName" placeholder="F.eks. Kari Hansen"></p>
                 </fieldset>

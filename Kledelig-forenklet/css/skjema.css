@@ -1,4 +1,67 @@
-/* Under utvikling! */
 form {
-	background: yellow;
+	width: clamp(20rem,100%,32rem);
+}
+
+form fieldset {
+	padding: 1rem;
+	border: solid 2px var(--toneWarm);
+	border-radius: .4rem;
+	margin-bottom: 1.2rem;
+}
+
+form legend {
+	font-weight: bold;
+	color:  var(--toneWarmXtraDark);
+	padding: 1rem;
+}
+form p {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+form p label {
+	margin-left: 0;
+	margin-right: 1rem;
+}
+
+form p label:after, form legend:after {
+	content: ":";
+}
+
+form p input {
+	font-size: 1rem;
+	background: white;
+	flex-basis: clamp(12rem,62%,20rem);
+	margin-right: 1rem;
+}
+
+form .actions {
+	text-align: right;
+}
+
+form .actions input {
+	font-weight: bold;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	padding: .9rem 1rem;
+	border-radius: .6rem;
+	background: var(--toneDark);
+	border: none;
+	box-shadow: .1rem .1rem .2rem rgba(0,0,0,.4), inset  .1rem .1rem .1rem rgb(255,255,255);
+	margin-bottom: .4rem;
+}
+
+@media screen and (max-width: 600px) {
+	form p {
+		flex-direction: column;
+		padding: 0;
+	}
+	form p label {
+		margin: 0 0 .2rem .2rem;
+	}
+	form p input{
+		padding: 0.4rem .2rem;
+		border-radius: .3rem;
+	}
 }

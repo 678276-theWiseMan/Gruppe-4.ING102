@@ -13,7 +13,7 @@
 }
 
 body {
-	background: var(--toneWarmDark);
+	background: var(--toneWarmXtraDark);
 	padding: 0;
 	margin: 0;
 	font-family: var(--standardText);
@@ -143,21 +143,25 @@ main .kategorier, main .produktvisning, main .korg {
 
 /* Footer Core */
 footer {
-	background: var(--toneWarmDark);
+	background: var(--toneWarmXtraDark);
+	background-image: url(../grafikk/logo-hvit.svg);
+	background-repeat: no-repeat;
+	background-size: clamp(4rem,10vw,10rem);
+	background-position: 87vw 1.4rem;
 	display: flex;
 	justify-content: flex-start;
 	align-items: top;
+	padding-right: 14vw;
 }
 
 footer ul {
-	background: var(--toneWarmXtraDark);
-	padding: 1.2rem 2rem;
 	border-radius: .3rem;
 	list-style-type: square;
 }
 
 footer li {
-	margin: .3rem 0;
+	font-size: smaller;
+	margin: .6rem 0;
 	color: white;
 }
 
@@ -169,4 +173,12 @@ footer a {
 footer a:hover {
 	padding-bottom: .2rem;
 	border-bottom: dotted 2px var(--toneBright);
+}
+
+@media screen and (max-width: 600px) {
+	footer {
+		padding-top: 2rem;
+		background-position: 2rem 1.2rem;
+	}
+
 }
