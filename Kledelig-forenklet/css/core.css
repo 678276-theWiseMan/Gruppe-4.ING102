@@ -1,99 +1,172 @@
 :root {
-  --headingFonts: Tahoma,sans-serif;
-  --standardText: Arial,Helvetica,sans-serif;
-  /* Bruk HSL-farger! Det vil komme til nytte siden. */
-  --toneDark: hsl(111,25%,87%);
-  --toneNav: hsl(185,89%,16%);
-  --toneNavShade: hsl(105,89%,16%);
-  --toneBright:  hsl(185,11%,95%);
-  --toneSunny:  hsl(64,36%,96%);
-  --toneWarm:  hsl(354,21%,90%);
-  --toneWarmDark:  hsl(352,62%,60%);
+	/* Setter variabler for enklere tilpassing i etterkant. */
+	--headingFonts: Tahoma,sans-serif;
+	--standardText: Arial,Helvetica,sans-serif;
+	/* Bruk HSL-farger! Det vil komme til nytte siden! */
+	--toneDark: hsl(111,25%,87%);
+	--toneNav: hsl(185,89%,16%);
+	--toneNavShade: hsl(105,89%,16%);
+	--toneBright:  hsl(185,11%,95%);
+	--toneWarm:  hsl(354,21%,90%);
+	--toneWarmDark:  hsl(352,62%,60%);
+	--toneWarmXtraDark: hsl(352,53%,37%);
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--standardText);
-  background: var(--toneBright);
+	background: var(--toneWarmDark);
+	padding: 0;
+	margin: 0;
+	font-family: var(--standardText);
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
 }
-h1, h2, h3, h4, h5, h6 {font-family: var(--headingFonts);color: var(--toneWarmDark)}
-a {color: var(--toneNav);}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--headingFonts);
+	color: var(--toneWarmDark);
+}
+
+a {
+	color: var(--toneNav);
+}
+
 button {
-  padding: .6rem;
-  border-radius: .3rem;
-  color: white;
-  background: linear-gradient(var(--toneNavShade),var(--toneNav));
-  border: none;
-  box-shadow: .1rem .1rem .6rem rgba(0,0,0,.2);
-  
+	padding: .6rem;
+	border-radius: .3rem;
+	color: white;
+	background: linear-gradient(var(--toneNavShade),var(--toneNav));
+	border: none;
+	box-shadow: .1rem .1rem .6rem rgba(0,0,0,.2);
+	
 }
+
 input {
-  min-width: 12rem;
+	min-width: 12rem;
 }
 
 /* Header (+ Footer) Core */
 
 header, footer {
-  margin: 0;
-  background: var(--toneDark);
-  position: relative;
-  width: 100%;
-  padding: .4rem 1.4rem;
-  /*display: flex;
-  justify-content: space-between;
-  align-items: center;*/
+	margin: 0;
+	background: var(--toneDark);
+	width: 100%;
+	padding: .4rem 1.4rem;
 }
-header .searchbar-div {
-  position: absolute;
-  top: 1.4rem;
-  right: 3.4rem;
-}
-header a {text-decoration: none;}
-header a:hover {font-weight: bold;border-bottom: dotted 2px var(--toneWarmDark);padding-bottom: .3rem;}
-header h1.logo img {width: clamp(3rem,100%,9rem);height: auto;}
-nav.header-nav ul {display: flex;}
-nav.header-nav li {margin-right: 1.4rem;list-style-type: none;}
 
-nav a.active {font-weight: bold;border-bottom: solid 2px var(--toneWarmDark);padding-bottom: .3rem;}
+header .searchbar-div {
+	position: absolute;
+	top: 1.4rem;
+	right: 3.4rem;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:hover {
+	font-weight: bold;
+	border-bottom: dotted 2px var(--toneWarmDark);
+	padding-bottom: .3rem;
+}
+
+header h1.logo img {
+	width: clamp(3rem,100%,9rem);
+	height: auto;
+}
+
+nav.header-nav ul {
+	display: flex;
+}
+
+nav.header-nav li {
+	margin-right: 1.4rem;
+	list-style-type: none;
+}
+
+nav a.active {
+	font-weight: bold;
+	border-bottom: solid 2px var(--toneWarmDark);
+	padding-bottom: .3rem;
+}
 /* MERK: Klassen shadow er tenkt for meny-elementer som ikke skal vises i menyen: */
-nav li.shadow {background: white;padding: .2rem;border-radius: .2rem;}
-nav li.shadow a {color: darkgreen;font-family: monospace;font-size: .8rem;}
-nav li.shadow a:before {content: "[";}
-nav li.shadow a:after {content: "]";}
-nav li.shadow a:hover {font-size: 1rem;color: maroon;background: yellow;}
-nav li.shadow a:hover:before {content: "[Skal skjules: ";}
+nav li.shadow {
+	background: white;
+	padding: .2rem;
+	border-radius: .2rem;
+}
+
+nav li.shadow a {
+	color: darkgreen;
+	font-family: monospace;
+	font-size: .8rem;
+}
+
+nav li.shadow a:before {
+	content: "[";
+}
+
+nav li.shadow a:after {
+	content: "]";
+}
+
+nav li.shadow a:hover {
+	font-size: 1rem;
+	color: maroon;
+	background: yellow;
+}
+
+nav li.shadow a:hover:before {
+	content: "[Skal skjules: ";
+}
 
 /* Main Core */
 
 main {
-  margin: 0 auto;
-  width: clamp(20rem,100%,42rem);
-  border: dotted 1px var(--toneDark);
-  padding: 0 1.6rem;
-  border-top: none;
-  border-bottom: none;
+	margin: 0;
+	background: var(--toneBright);
+}
+
+main article,main .kategorier, main .produktvisning, main .korg {
+	width: clamp(20rem,100%,42rem);
+	margin: 2rem auto 4rem auto;
+	border: dotted 1px var(--toneDark);
+	border-top: none;
+	border-bottom: none;
+	padding: 0 1.6rem 4rem 1.6rem;
+}
+
+/* Disse klassene tillater bredere visning for main. */
+main .kategorier, main .produktvisning, main .korg {
+	width: clamp(20rem,100%,90vw);
 }
 
 /* Footer Core */
 footer {
-  position: fixed;
-  bottom: 0;
-  background: var(--toneWarmDark);
-}
-footer ul {
-	list-style-type: none;
+	background: var(--toneWarmDark);
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: top;
 }
+
+footer ul {
+	background: var(--toneWarmXtraDark);
+	padding: 1.2rem 2rem;
+	border-radius: .3rem;
+	list-style-type: square;
+}
+
 footer li {
-	margin-right: 1.4rem;
+	margin: .3rem 0;
+	color: white;
 }
+
 footer a {
-  background: linear-gradient(var(--toneNavShade),var(--toneNav));
-  padding: .6rem .4rem;
-  border-radius: .3rem;
-  color: var(--toneBright);
-  text-decoration: none;
+	color: var(--toneBright);
+	text-decoration: none;
+}
+
+footer a:hover {
+	padding-bottom: .2rem;
+	border-bottom: dotted 2px var(--toneBright);
 }
