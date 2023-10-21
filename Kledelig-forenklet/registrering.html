@@ -30,17 +30,21 @@
     </header>
 
     <main>
-       <article>
-            <form action="/action_page.php">
-                <p>  <label for ="navn"> Nytt Brukernavn: </label> 
-                    <input type="text" name="navn" id="brukernavn"></p>
-                    <p> <label for="passord"> Nytt Passord: </label>
-                    <input type="text" name="passord" id="passord"></p>
-                    <p> <input type="radio" id="Mann" name="kjønnm" value="mann">
-                <label for="mann">Mann</label><br>
-                <p> <input type="radio" id="kvinne" name="kjønnk" value="kvinne">
-                <label for="kvinne">Kvinne</label><hr></p>
-                <p> <input type="submit" value="Registrer deg"></p>
+        <article>
+            <form onsubmit="alert('Klar for funksjon: ' + lastName.value + ' ' + firstName.value + ' ' + userName.value + ' ' + password.value + ' ' + passwordConfirmed.value)">
+                <fieldset><legend>Personalia</legend>
+					<p><label>Etternavn</label> <input type="text" id="lastName" placeholder="F.eks. Olsen"></p>
+					<p><label>Fornavn</label> <input type="text" id="firstName" placeholder="F.eks. Kari Hansen"></p>
+                </fieldset>
+                <fieldset><legend>Kledeli-konto</legend>
+					<p><label>Brukernavn</label> <input type="text" id="userName" placeholder="F.eks. kario"></p>
+					<p><label>Passord</label> <input type="password" id="password" placeholder="Minst åtte tegn"></p>
+					<p><label>Bekreft passord</label> <input type="password" id="passwordConfirmed" placeholder="Samme som over"></p>
+                </fieldset>
+                <section class="actions">
+                	<input type="reset" value="Nullstill">
+                	<input type="submit" value="Opprett konto">
+                </section>
             </form>
         </article>
     </main>
