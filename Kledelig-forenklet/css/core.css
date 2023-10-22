@@ -71,7 +71,9 @@ header a:hover {
 	border-bottom: dotted 2px var(--toneWarmDark);
 	padding-bottom: .3rem;
 }
-
+header h1 {
+	margin: .2rem 0;
+}
 header h1.logo img {
 	width: clamp(3rem,100%,9rem);
 	height: auto;
@@ -81,7 +83,9 @@ nav.header-nav ul {
 	display: flex;
 }
 
+
 nav.header-nav li {
+	white-space: nowrap;
 	margin-right: 1.4rem;
 	list-style-type: none;
 }
@@ -120,6 +124,22 @@ nav li.shadow a:hover {
 
 nav li.shadow a:hover:before {
 	content: "[Skal skjules: ";
+}
+
+@media screen and (max-width: 600px) {
+	nav.header-nav ul {
+		flex-direction: column;
+	}
+	nav.header-nav ul li {
+		padding: .3rem 0;
+		border-bottom: solid 1px white; 
+		margin: .3rem 0;
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+	nav.header-nav ul li:last-child {
+		border: none;
+	}
 }
 
 /* Main Core */
