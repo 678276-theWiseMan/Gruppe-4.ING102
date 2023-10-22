@@ -130,9 +130,9 @@ main {
 }
 
 main article,main .kategorier, main .produktvisning, main .korg {
-	width: clamp(20rem,100%,42rem);
+	width: clamp(12rem,85%,42rem);
 	margin: 2rem auto 4rem auto;
-	border: dotted 1px var(--toneDark);
+	border: solid 2px var(--toneWarm);
 	border-top: none;
 	border-bottom: none;
 	padding: 0 1.6rem 4rem 1.6rem;
