@@ -1,3 +1,5 @@
+const LOCAL_STORAGE_KEY = 'userAccountData';
+
 function kontoOppretting(skjemaData){
     try{
         // Henter inn alle input-felt
@@ -10,17 +12,63 @@ function kontoOppretting(skjemaData){
         inputs.forEach((inp) => {
             tilLagring[inp.id] = inp.value;
         });
-
-        // Oppdaterer display navn og email
-        document.getElementById('displayName').innerHTML = `${tilLagring['firstName']} ${tilLagring['lastName']}`;
-        document.getElementById('displayEmail').innerHTML = `${tilLagring['email']}`;
         
         // Lagrer i browserens database
-        localStorage.setItem('userAccountData', JSON.stringify(tilLagring));
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tilLagring));
         
+        // Oppdaterer konto data til UI
+        visKontoData();
+        
+        // Returnerer respons
         return '<h3>Takk ' + tilLagring['firstName'] + ', du er nå registrert hos Kledeli!</h3>';
 
     }catch(e){
         return '<p class="error">Feil oppstod under lagring av registreringsdatas: ' + e + '</p>';
     }
 }
+
+async function visKontoData(){
+	let accountData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+	if (accountData !== null){
+	
+		// Oppdaterer til konto-info
+		try{
+			let nameTrgt = document.getElementById('displayName');
+        	let emailTrgt = document.getElementById('displayEmail');
+			if (nameTrgt && emailTrgt){
+				nameTrgt.innerHTML = `${accountData['firstName']} ${accountData['lastName']}`;
+				emailTrgt.innerHTML = accountData['email'];
+			}else{
+				console.info('Kledeli: Fant ikke id-er displayName eller displayEmail');
+			}
+		}catch(e){
+			console.error('Kledeli: Kunne ikke behandle kontodata: ' + e);
+		}
+		
+		// Oppdaterer til skjemaoverskrift
+		try{
+			let skjemaOverskrift = document.getElementById('editAccountUI');
+			if (!!skjemaOverskrift){
+				skjemaOverskrift.innerText = 'Hold kontoen din oppdatert!';
+			}
+		}catch(e){
+			console.error('Kledeli: Kunne ikke oppdatere skjemaoverskrift: ' + e);
+		}
+		
+		// Oppdaterer til navigasjonsmenyen
+		let dinKontoMenyElement = document.querySelector('nav').querySelector('a[href$="dinkonto.html"]');
+		if (!!dinKontoMenyElement){
+			try{
+				dinKontoMenyElement.innerText = accountData['firstName'] + ' sin konto';
+			}catch(e){
+				console.error('Kledeli: Kunne ikke oppdatere meny-element: ' + e);
+			}
+		}
+		
+	}else{
+		console.info('Kledeli: Ingen konto er registrert for denne bruker.');
+	}
+}
+
+// Oppdaterer konto data til UI på alle sider (etter at siden er lastet helt).
+document.addEventListener("DOMContentLoaded", visKontoData);
