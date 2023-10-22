@@ -12,8 +12,8 @@ function kontoOppretting(skjemaData){
         });
 
         // Oppdaterer display navn og email
-        document.getElementById('displayName').innerHTML = `<b>Navn:</b> ${tilLagring['firstName']} ${tilLagring['lastName']}`;
-        document.getElementById('displayEmail').innerHTML = `<b>E-post:</b> ${tilLagring['email']}`;
+        document.getElementById('displayName').innerHTML = `${tilLagring['firstName']} ${tilLagring['lastName']}`;
+        document.getElementById('displayEmail').innerHTML = `${tilLagring['email']}`;
         
         // Lagrer i browserens database
         localStorage.setItem('userAccountData', JSON.stringify(tilLagring));
