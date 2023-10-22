@@ -45,7 +45,6 @@ form .actions input {
 	font-size: .9rem;
 	letter-spacing: .1rem;
 	padding: .9rem 1rem;
-	border-radius: .6rem;
 	background: var(--toneDark);
 	border: none;
 	box-shadow: var(--boxShadow);
@@ -62,6 +61,5 @@ form .actions input {
 	}
 	form p input{
 		padding: 0.4rem .2rem;
-		border-radius: .3rem;
 	}
 }
