@@ -10,6 +10,8 @@
 	--toneWarm:  hsl(354,21%,90%);
 	--toneWarmDark:  hsl(352,62%,60%);
 	--toneWarmXtraDark: hsl(352,53%,37%);
+	/* Knotter og details */
+	--boxShadow: .1rem .1rem .2rem rgba(0,0,0,.4), inset  .1rem .1rem .1rem rgb(255,255,255);
 }
 
 body {
@@ -141,13 +143,14 @@ main article details {
 }
 
 main article details summary {
-	font-size: smaller;
 	cursor: pointer;
-	color: var(--toneNav);
-	font-weight: bold;
-	border: solid 2px var(--toneWarmDark);
-	padding: .4rem .8rem;
-	border-radius: .3rem;
+	font-size: .9rem;
+	padding: .6rem 1rem;
+	border-radius: .2rem;
+	background: var(--toneDark);
+	border: none;
+	box-shadow: var(--boxShadow);
+	margin-bottom: .4rem;
 	display: inline-block;
 }
 
