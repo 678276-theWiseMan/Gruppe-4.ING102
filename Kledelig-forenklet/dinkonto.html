@@ -19,7 +19,6 @@
         <nav class="header-nav">
             <ul>
                 <li><a href="kategorier.html">Kategorier</a></li>
-                <li><a href="registrering.html">Registrer Deg</a></li>
                 <li><a class="active" href="dinkonto.html">Din Konto</a></li>
                 <li><a href="omoss.html">Om Oss</a></li>
                 <li><a href="handlekurv.html">Handlekurv</a></li>
@@ -30,23 +29,43 @@
     </header>
     <main>
     	<article>
-			<section>
-				<h2>Din konto</h2>
-				<p><b>Navn:</b> Navn Navnesen</p>
-				<p><b>E-post:</b> navn.navnesen@mail.com</p>
-				<a href="endre-passord.html"> Endre passord</a>
-				<br>
-				<p><a href="logg-ut.html">Logg ut</a></p>
-			</section>
+		<section>
+			<h2>Din konto</h2>
+			<p><b>Navn:</b> Navn Navnesen</p>
+			<p><b>E-post:</b> navn.navnesen@mail.com</p>
+			<a href="endre-passord.html"> Endre passord</a>
+			<br>
+			<p><a href="logg-ut.html">Logg ut</a></p>
+		</section>
 
-			<section>
-				<h2>Din oversikt</h2>
-				<ul>
-					<li><a href="medlemskap.html">Ditt medlemskap</a></li>
-					<li><a href="dine-klær.html">Dine klær / bestillinger</a></li>
-					<li><a href="hjelp.html">Hjelp og kontakt</a></li>
-				</ul>
-			</section>
+		<section>
+			<h2>Din oversikt</h2>
+			<ul>
+				<li><a href="medlemskap.html">Ditt medlemskap</a></li>
+				<li><a href="dine-klær.html">Dine klær / bestillinger</a></li>
+				<li><a href="hjelp.html">Hjelp og kontakt</a></li>
+			</ul>
+		</section>
+		
+		<details><summary><span>Har du ikke Kledeli-konto? Opprett konto her!</span><span>Lukk skjema</span></summary>
+		<form onsubmit="try{this.innerHTML = kontoOppretting(this);}catch(e){alert('En feil oppstod: ' + e);};return false;">
+			<h2>Opprett Kledeli-konto</h2>
+				<fieldset><legend>Personalia</legend>
+					<p><label>Etternavn</label> <input type="text" id="lastName" placeholder="F.eks. Olsen" required></p>
+					<p><label>Fornavn</label> <input type="text" id="firstName" placeholder="F.eks. Kari Hansen" required></p>
+					<p><label>E-post</label> <input type="email" id="email" placeholder="F.eks. kari@olsen.no" required></p>
+				</fieldset>
+				<fieldset><legend>Kledeli-konto</legend>
+					<p><label>Brukernavn</label> <input type="text" id="userName" placeholder="F.eks. kario" required></p>
+					<p><label>Passord</label> <input type="password" id="password" placeholder="Minst åtte tegn" required></p>
+					<p><label>Bekreft passord</label> <input type="password" id="passwordConfirmed" placeholder="Samme som over" required></p>
+				</fieldset>
+				<section class="actions">
+					<input type="reset" value="Nullstill">
+					<input type="submit" value="Opprett konto">
+				</section>
+			</form>
+    		</details>
         </articel>
     </main>
     <aside></aside>
