@@ -136,6 +136,35 @@ main article,main .kategorier, main .produktvisning, main .korg {
 	padding: 0 1.6rem 4rem 1.6rem;
 }
 
+main article details {
+	margin: 2rem 0;
+}
+
+main article details summary {
+	font-size: smaller;
+	cursor: pointer;
+	color: var(--toneNav);
+	font-weight: bold;
+	border: solid 2px var(--toneWarmDark);
+	padding: .4rem .8rem;
+	border-radius: .3rem;
+	display: inline-block;
+}
+
+main article details summary span:last-child {
+	display: none;
+}
+
+
+main article details[open] summary span:last-child {
+	float: left;
+	display: block;
+	margin-right: .6rem;
+}
+main article details[open] summary span:first-child {
+	display: none;
+}
+
 /* Disse klassene tillater bredere visning for main. */
 main .kategorier, main .produktvisning, main .korg {
 	width: clamp(20rem,100%,90vw);
