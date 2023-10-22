@@ -48,7 +48,7 @@ form .actions input {
 	border-radius: .6rem;
 	background: var(--toneDark);
 	border: none;
-	box-shadow: .1rem .1rem .2rem rgba(0,0,0,.4), inset  .1rem .1rem .1rem rgb(255,255,255);
+	box-shadow: var(--boxShadow);
 	margin-bottom: .4rem;
 }
 
