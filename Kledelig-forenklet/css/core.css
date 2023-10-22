@@ -11,7 +11,7 @@
 	--toneWarmDark:  hsl(352,62%,60%);
 	--toneWarmXtraDark: hsl(352,53%,37%);
 	/* Knotter og details */
-	--boxShadow: .1rem .1rem .2rem rgba(0,0,0,.4), inset  .1rem .1rem .1rem rgb(255,255,255);
+	--boxShadow: .2rem .2rem 0 rgba(0,0,0,.4);
 }
 
 body {
@@ -35,11 +35,10 @@ a {
 
 button {
 	padding: .6rem;
-	border-radius: .3rem;
 	color: white;
 	background: linear-gradient(var(--toneNavShade),var(--toneNav));
 	border: none;
-	box-shadow: .1rem .1rem .6rem rgba(0,0,0,.2);
+	box-shadow: var(--boxShadow);
 	
 }
 
@@ -166,7 +165,6 @@ main article details summary {
 	cursor: pointer;
 	font-size: .9rem;
 	padding: .6rem 1rem;
-	border-radius: .2rem;
 	background: var(--toneDark);
 	border: none;
 	box-shadow: var(--boxShadow);
