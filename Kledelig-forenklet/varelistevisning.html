@@ -34,37 +34,29 @@
     <main>
         <section class="produktvisning">
             <h2>Produkter</h2>
-            <div class="container-grid">
-            <figure class="produktGrid">
+            <section class="produktGrid">
+                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
                 <a href="varedetalj.html">
                     <img src="grafikk/forhandstitt.gif" alt="Produkt 1" >
-                    <figcaption>
                         <h4>Produkt 1</h4>
-                    </figcaption>
                 </a>
-                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
-            </figure>
+            </section>
 
-            <figure class="produktGrid">
-                <a href="varedetalj.html" >
-                    <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
-                    <figcaption>
-                        <h4>Produkt 2</h4>
-                    </figcaption>
-                </a>
-                <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
-            </figure>
-
-            <figure class="produktGrid">
+            <section class="produktGrid">
                 <a href="varedetalj.html">
-                    <img src="grafikk/forhandstitt.gif" alt="Produkt 3" >
-                    <figcaption>
-                        <h4>Produkt 3</h4>
-                    </figcaption>
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
+                        <h4>Produkt 2</h4>
                 </a>
+            </section>
+
+            <section class="produktGrid">
                 <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
-            </figure>
-            </div>
+                <a href="varedetalj.html">
+                        <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
+                            <h4>Produkt 1</h4>
+                </a>
+            </section>
         </section>
     </main>
 

@@ -12,6 +12,16 @@
     text-align: center;
 }
 
+.produktGrid {
+    position: relative;
+    display: inline-grid;
+    margin: 30px;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .produktGrid:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -19,6 +29,35 @@
 .produktGrid img {
     width: 100%;
     height: auto;
+}
+
+.produktGrid2 {
+    position: relative;
+    display: inline-grid;
+    margin: 30px;
+    width: 510px;
+    cursor: pointer;
+}
+
+.produktGrid2:hover img{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.produktGrid2 img {
+    width: 100%;
+    height: auto;
+}
+
+.produkttekst {
+    text-align: center;
+}
+
+.korg {
+    text-align: center;
+}
+
+.kategorier {
+    text-align: center;
 }
 
 .container-grid {
@@ -33,37 +72,9 @@
     height: auto;
 }
 
-.produktGrid {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    margin: 30px;
-    width: 450px;
-    cursor: pointer;
-}
-
-.Kategori {
-    margin: 30px;
-    width: 500px;
-    cursor: pointer;
+.produktGrid h4 {
     text-align: center;
-}
-
-.Kategori img {
-    width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: auto;
-}
-
-.Kategori img:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-figcaption {
     padding: 2em;
-}
-
-figcaption h4 {
-    text-align: center;
 }
 
 .favoritt {
@@ -111,7 +122,7 @@ figcaption h4 {
 
 .text-container {
     width: 70%;
-    height: 65%;
+    height: 58%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -129,9 +140,6 @@ figcaption h4 {
     margin-top: 30px;
     margin-bottom: 5px;
     margin-left: 20px;
-}
-
-.produktDetalj figcaption {
     text-align: left;
     font-size: 12px;
     margin-bottom: 1px; 
