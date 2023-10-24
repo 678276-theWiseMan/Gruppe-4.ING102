@@ -64,6 +64,21 @@ async function visKontoData(){
 				console.error('Kledeli: Kunne ikke oppdatere meny-element: ' + e);
 			}
 		}
+		// Fyll inn form-feltene hvis de eksisterer på siden
+		try {
+			let lastNameField = document.getElementById('lastName');
+			let firstNameField = document.getElementById('firstName');
+			let emailField = document.getElementById('email');
+			
+			if (lastNameField && firstNameField && emailField) {
+				lastNameField.value = accountData['lastName'];
+				firstNameField.value = accountData['firstName'];
+				emailField.value = accountData['email'];
+			}
+		} catch(e) {
+			console.error('Kunne ikke fylle ut form-feltene: ' + e);
+		}
+
 		
 	}else{
 		console.info('Kledeli: Ingen konto er registrert for denne bruker.');
