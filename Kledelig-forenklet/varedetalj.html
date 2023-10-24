@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/combined.css">
     <script src="script/main.js"></script>
+    <script src="script/varelistevisning.js"></script>
     <title>Varedetalj</title>
 </head>
 <body>
@@ -29,16 +30,20 @@
     </header>
 
     <main>
-        <section class="produktDetalj">
+        <div class="produktDetalj">
             <figure>
                 <img src="grafikk/detalj.gif" alt="Produkt 1">
             </figure>
             <div class="text-container">
-                <figcaption>
-                    <h3>Produkt 1</h3>
-                    <p>tom</p>
-                </figcaption>
-                <section class="størrelseUtvalg">
+                    <h2>Produkt 1</h2>
+                    <p>
+                        overmateriale: 100% Skinn som er godkjent av Leather Working Group
+                        Hvordan vet vi dette: merket erklærer bruk av skinn som er godkjent av Leather Working Group (LWG)
+                        Alt skinnet i dette produktet oppfyller kriteriene for Leather Working Group (LWG)-protokollen.
+                        Produsenter som fremstiller dette skinnet, oppfyller kjemiske, miljømessige, avfallshåndterings-
+                        og sporbarhetsstandarder.
+                    </p>
+                <div class="størrelseUtvalg">
                     <label for="størrelse">Velg en størrelse:</label>
                     <select id="størrelse" name="størrelse">
                         <option value="Small">Small</option>
@@ -46,31 +51,30 @@
                         <option value="large">Large</option>
                         <option value="x-large">X-Large</option>
                     </select>
-                </section>
-                <button>Legg til handlevogn</button>
+                </div>
+                <a href="handlekurv.html" class="button">Legg til handlekurv</a>
             </div>
-        </section>
+        </div>
 
         <section class="anbefaling">
             <h3>Anbefalte Produkter</h3>
+            <div class="container-grid">
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj.html">
+                            <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
+                                <h4>Produkt 2</h4>
+                    </a>
+                </section>
 
-            <figure class="produktGrid">
-                <a href="produkt1.html">
-                <img src="grafikk/forhandstitt.gif" alt="Produkt 2" width="300" height="380">
-                <figcaption>
-                    <h4>Produkt 2</h4>
-                </figcaption>
-                </a>
-            </figure>
-
-            <figure class="produktGrid">
-                <a href="produkt1.html">
-                <img src="grafikk/forhandstitt.gif" alt="Produkt 3" width="300" height="380">
-                <figcaption>
-                    <h4>Produkt 3</h4>
-                </figcaption>
-                </a>
-            </figure>
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj.html">
+                            <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
+                                <h4>Produkt 3</h4>
+                    </a>
+                </section>
+            </div>
         </section>
     </main>
 
