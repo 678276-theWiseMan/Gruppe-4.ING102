@@ -48,6 +48,8 @@ input {
 	min-width: 12rem;
 }
 
+#changePWfieldset {display: none;}
+
 /* Header (+ Footer) Core */
 
 header, footer {
