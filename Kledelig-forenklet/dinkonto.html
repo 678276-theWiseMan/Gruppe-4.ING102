@@ -54,10 +54,17 @@
 						<p><label>Fornavn</label> <input type="text" id="firstName" placeholder="F.eks. Kari Hansen" required></p>
 						<p><label>E-post</label> <input type="email" id="email" placeholder="F.eks. kari@olsen.no" value="placebo@komledott.com" required></p>
 					</fieldset>
-					<fieldset><legend>Kledeli-konto</legend>
+					<fieldset id="setPWfieldset"><legend>Kledeli-konto</legend>
 						<p><label>Brukernavn</label> <input type="text" id="userName" placeholder="F.eks. kario" required></p>
 						<p><label>Passord</label> <input type="password" id="password" placeholder="Minst åtte tegn" required></p>
 						<p><label>Bekreft passord</label> <input type="password" id="passwordConfirmed" placeholder="Samme som over" required></p>
+					</fieldset>
+					<fieldset id="changePWfieldset"><legend>Endre passord for <em id="newPWusername">···</em></legend>
+						<p><label>Nåværende</label> <input type="password" id="password" placeholder="Minst åtte tegn" required></p>
+						<hr>
+						<p><label>Nytt passord</label> <input type="password" id="newpassword" placeholder="Minst åtte tegn" required></p>
+						<p><label>Bekreft passord</label> <input type="password" id="newpassword" placeholder="Samme som over" required></p>
+						<p><small><u><a href="https://en.wikipedia.org/wiki/Placebo" target="_blank">Glemt passord...</a></u></small></p>
 					</fieldset>
 					<div class="actions">
 						<input type="reset" value="Nullstill">
