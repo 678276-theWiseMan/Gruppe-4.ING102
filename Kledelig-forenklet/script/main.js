@@ -27,6 +27,13 @@ function kontoOppretting(skjemaData){
     }
 }
 
+/**
+ * TODO:
+ * document.getElementById('editAccountUI') får endret innerText til 'Rediger din konto' dersom konto allerede finnes.
+ * document.getElementById('changePWfieldset').style.display = 'block' dersom konto allerede finnes.
+ * document.getElementById('setPWfieldset').style.display = 'none' dersom konto IKKE finnes.
+ */
+
 async function visKontoData(){
 	let accountData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 	if (accountData !== null){
