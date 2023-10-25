@@ -184,3 +184,7 @@ function loggUt (){
 async function toggleFavoritt(element) {
     element.classList.toggle('active');
 }
+
+function bestilt(){
+		alert("Takk for bestillingen!");
+}
