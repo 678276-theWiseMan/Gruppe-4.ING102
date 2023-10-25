@@ -127,3 +127,8 @@ function loggUt (){
 	localStorage.clear();
 	window.location.reload();
 }
+
+// Toggle for favoritt ved varelistevisning og varedetalj.
+async function toggleFavoritt(element) {
+    element.classList.toggle('active');
+}

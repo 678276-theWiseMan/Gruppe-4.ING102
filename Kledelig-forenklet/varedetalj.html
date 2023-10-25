@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/combined.css">
     <script src="script/main.js"></script>
-    <script src="script/varelistevisning.js"></script>
     <title>Varedetalj</title>
 </head>
 <body>
@@ -32,17 +31,22 @@
     <main>
         <div class="produktDetalj">
             <figure>
-                <img src="grafikk/detalj.gif" alt="Produkt 1">
+                <img src="grafikk/produkter/jakke2.jpeg" alt="Produkt 1">
             </figure>
             <div class="text-container">
-                    <h2>Produkt 1</h2>
+                    <h2>Eco-Friendly Ytterjakke</h2>
                     <p>
-                        overmateriale: 100% Skinn som er godkjent av Leather Working Group
-                        Hvordan vet vi dette: merket erklærer bruk av skinn som er godkjent av Leather Working Group (LWG)
-                        Alt skinnet i dette produktet oppfyller kriteriene for Leather Working Group (LWG)-protokollen.
-                        Produsenter som fremstiller dette skinnet, oppfyller kjemiske, miljømessige, avfallshåndterings-
-                        og sporbarhetsstandarder.
+                        <b>Produktinformasjon</b>
                     </p>
+                    <p class="Produktbeskrivelse">
+                        Introduserer vår "Eco-Friendly Ytterjakke". Den ultimate beskyttelsen for ditt barn mot værets utfordringer, spesialdesignet for å ivareta både barnet og planeten vår!
+                        Denne unike ytterjakken er perfekt for små eventyrere i alderen 0-12 år og er nøye utformet med bærekraft og kvalitet i tankene.
+                    </p>
+                    <ul class="Produktbeskrivelse">
+                        <li>Laget av høykvalitets, miljøvennlige tekstiler som er nøye valgt for å redusere miljøavtrykket.</li>
+                        <li>Stoffet er slitesterkt, lett og skånsomt mot barnets hud, samtidig som det sikrer optimal pusteevne og komfort.</li>
+                    </ul>
+                    
                 <div class="størrelseUtvalg">
                     <label for="størrelse">Velg en størrelse:</label>
                     <select id="størrelse" name="størrelse">
@@ -62,16 +66,24 @@
                 <section class="produktGrid">
                     <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
                     <a href="varedetalj.html">
-                            <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
-                                <h4>Produkt 2</h4>
+                            <img src="grafikk/produkter/hansker2.jpeg" alt="Produkt 2" >
+                                <h4>Eco-Friendly Hansker</h4>
                     </a>
                 </section>
 
                 <section class="produktGrid">
                     <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
                     <a href="varedetalj.html">
-                            <img src="grafikk/forhandstitt.gif" alt="Produkt 2" >
-                                <h4>Produkt 3</h4>
+                            <img src="grafikk/produkter/jakke1.jpeg" alt="Produkt 2" >
+                                <h4>Eco-Friendly Ytterjakke</h4>
+                    </a>
+                </section>
+
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj.html">
+                            <img src="grafikk/produkter/body1.jpeg" alt="Produkt 2" >
+                                <h4>Eco-Friendly innertøy</h4>
                     </a>
                 </section>
             </div>
