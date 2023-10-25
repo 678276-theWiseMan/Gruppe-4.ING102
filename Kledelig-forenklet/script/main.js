@@ -142,9 +142,34 @@ function updateFooter(){
 	
 }
 
+function updateSearchBtn(){
+	// Oppdaterer til funksjonell HTML for søkefelt.
+	try {
+		let searchBar = document.querySelector('.searchbar-div');
+		if (!!searchBar){
+			let action = 'varelistevisning.html';
+			if (/\/kontakt\//.test(window.location)){
+				action = '../varelistevisning.html'
+			}
+			searchBar.innerHTML = `
+			<form action="${action}" method="get" class="searchbar">
+                <input class="searchbar" type="search" placeholder="Søk" name="q">
+                <input type="submit" name="Søk" value="Søk">
+            </form>
+			`;		
+		}else{
+			console.error('Kledeli: Kunne ikkefinne område for søk.');
+		}
+		
+	}catch(e){
+		console.error('Kledeli: Kunne ikke manipulere Search-knappen: ' + e);
+	}	
+}
+
 function updateAllDynamic(){
 	visKontoData();
 	updateFooter();
+	updateSearchBtn();
 }
 
 // Oppdaterer konto data til UI på alle sider (etter at siden er lastet helt).
