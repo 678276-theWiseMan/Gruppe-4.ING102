@@ -35,29 +35,32 @@ function kontoOppretting(skjemaData){
  */
 
 async function visKontoData(){
+	let changePWfieldset = document.getElementById('changePWfieldset');
+        let setPWfieldset = document.getElementById('setPWfieldset');
 	let accountData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 	if (accountData !== null){
 		
 		// oppdater UI basetr på eksisterende konto
 		let editAccountUI = document.getElementById('editAccountUI');
-        let changePWfieldset = document.getElementById('changePWfieldset');
-        let setPWfieldset = document.getElementById('setPWfieldset');
+        	
     	
 		if (!!newPWusername && !!displayName) {
 			newPWusername.innerText =`${accountData['firstName']} ${accountData['lastName']}`;
 		}
 		
-        if (!!editAccountUI) {
-            editAccountUI.innerText = 'Rediger din konto';
-        }
-        
-        if (!!changePWfieldset) {
-            changePWfieldset.style.display = 'block';
-        }
-        
-        if (!!setPWfieldset) {
-            setPWfieldset.style.display = 'none';
-        }
+	        if (!!editAccountUI) {
+	            editAccountUI.innerText = 'Rediger din konto';
+	        }
+	        
+	        if (!!changePWfieldset) {
+	            // Viser område for ev. endring av passord.
+	            changePWfieldset.style.display = 'block';
+	        }
+	        
+	        if (!!setPWfieldset) {
+	            // Har kontor fra før, skjule område for førstegangssetting av passord
+	            setPWfieldset.outerHTML = '';
+	        }
 	
 		// Oppdaterer til konto-info
 		try{
@@ -109,6 +112,10 @@ async function visKontoData(){
 
 		
 	}else{
+		if (!!changePWfieldset) {
+	            // Har ikke kontor fra før, skjuler område for 'Endre passord'
+	            changePWfieldset.outerHTML = '';
+	        }
 		console.info('Kledeli: Ingen konto er registrert for denne bruker.');
 	}
 }
