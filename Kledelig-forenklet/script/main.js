@@ -37,6 +37,23 @@ function kontoOppretting(skjemaData){
 async function visKontoData(){
 	let accountData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 	if (accountData !== null){
+		
+		// oppdater UI basetr på eksisterende konto
+		let editAccountUI = document.getElementById('editAccountUI');
+        let changePWfieldset = document.getElementById('changePWfieldset');
+        let setPWfieldset = document.getElementById('setPWfieldset');
+        
+        if (!!editAccountUI) {
+            editAccountUI.innerText = 'Rediger din konto';
+        }
+        
+        if (!!changePWfieldset) {
+            changePWfieldset.style.display = 'block';
+        }
+        
+        if (!!setPWfieldset) {
+            setPWfieldset.style.display = 'none';
+        }
 	
 		// Oppdaterer til konto-info
 		try{
