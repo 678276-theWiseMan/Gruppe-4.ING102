@@ -42,7 +42,11 @@ async function visKontoData(){
 		let editAccountUI = document.getElementById('editAccountUI');
         let changePWfieldset = document.getElementById('changePWfieldset');
         let setPWfieldset = document.getElementById('setPWfieldset');
-        
+    	
+		if (!!newPWusername && !!displayName) {
+			newPWusername.innerText =`${accountData['firstName']} ${accountData['lastName']}`;
+		}
+		
         if (!!editAccountUI) {
             editAccountUI.innerText = 'Rediger din konto';
         }
