@@ -30,6 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: var(--toneWarmDark);
 }
 
+
+
 a {
 	color: var(--toneNav);
 	text-decoration: none;
@@ -202,17 +204,29 @@ footer {
 	background-repeat: no-repeat;
 	background-size: clamp(4rem,10vw,10rem);
 	background-position: 87vw 1.4rem;
+	color: white;
 	display: flex;
 	justify-content: flex-start;
 	align-items: top;
 	padding-right: 14vw;
 }
 
+footer h3 {
+	color: white;
+	font-weight: bold;
+	font-size: .9rem;
+	margin: 1.4rem 0 .3rem 0;
+}
+
 footer ul {
 	border-radius: .3rem;
 	list-style-type: square;
+	padding-left: 1rem;
 }
-
+footer h3, footer ul {
+	margin-left: 2rem;
+}
+	
 footer li {
 	font-size: smaller;
 	margin: .6rem 0;
@@ -233,6 +247,8 @@ footer a:hover {
 	footer {
 		padding-top: 2rem;
 		background-position: 2rem 1.2rem;
+		flex-direction: column;
 	}
+	
 
 }
