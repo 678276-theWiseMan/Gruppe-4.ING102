@@ -122,8 +122,33 @@ async function visKontoData(){
 	}
 }
 
+function updateFooter(){
+	let firmaOpplysninger = document.createElement('div');
+	firmaOpplysninger.id = 'firmaOpplysninger';
+	firmaOpplysninger.innerHTML = `
+		<h3>Firmaopplysninger</h3>
+		<ul>
+			<li>Stiftelsen Kledeli</li>
+			<li>Organisasjonsnummer: NO 92939495 MVA</li>
+			<li>Telefon: +47 900 90 733</li>
+		</ul>
+	`;
+	document.querySelector('footer').appendChild(firmaOpplysninger);
+	try {
+	
+	}catch(e){
+		console.error('Kledeli: Kunne ikke sette inn i footer: ' + e);
+	}
+	
+}
+
+function updateAllDynamic(){
+	visKontoData();
+	updateFooter();
+}
+
 // Oppdaterer konto data til UI på alle sider (etter at siden er lastet helt).
-document.addEventListener("DOMContentLoaded", visKontoData);
+document.addEventListener("DOMContentLoaded", updateAllDynamic);
 
 function loggUt (){
 	localStorage.clear();
