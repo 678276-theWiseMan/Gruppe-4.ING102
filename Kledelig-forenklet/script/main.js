@@ -94,3 +94,8 @@ async function visKontoData(){
 
 // Oppdaterer konto data til UI på alle sider (etter at siden er lastet helt).
 document.addEventListener("DOMContentLoaded", visKontoData);
+
+function loggUt (){
+	localStorage.clear();
+	window.location.reload();
+}
