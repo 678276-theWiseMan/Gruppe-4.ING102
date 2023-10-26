@@ -30,7 +30,7 @@
 
     <main>
 
-        <div class="korg">
+        <section class="korg">
             <h2>Handlekurv</h2>
             <ul>
                 <li class="produktGrid2" id="produktIHandlekurv1">
@@ -42,36 +42,13 @@
                     <div class="produktbildet">
                         <img src="grafikk/produkter/sko2.jpeg" alt="kurvProdukt1">
                     </div>
-                        <button onclick="removeProduktIHandlekurv()">Fjern</button>
-                    
-                </li>
-                <li class="produktGrid2" id="produktIHandlekurv2">
-                    <div class="produkttekst">
-                        <h3>Joha Body</h3>
-                        <p>Størrelse: 74 cm</p>
-                    </div>
-                    <div class="produktbildet">
-                        <img src="grafikk/produkter/body2.jpeg" alt="kurvProdukt2">
-                    </div>
-                    <button onclick="removeProduktIHandlekurv()">Fjern</button>
-                    
-                </li>
-                <li class="produktGrid2" id="produktIHandlekurv3">
-                    <div class="produkttekst">
-                        <h3>Joha Body</h3>
-                        <p>Størrelse: 86 cm</p>
-                    </div>
-                    <div class="produktbildet">
-                        <img src="grafikk/produkter/body2.jpeg" alt="kurvProdukt2">
-                    </div>
-                    <button onclick="removeProduktIHandlekurv()">Fjern</button>
-                    
+                        <button onclick="fjernFraHandlekurv()">Fjern</button>
                 </li>
             </ul>
 
             <article>
                 <details><summary><span>Frakt</span><span>Frakt</span></summary>
-                    <form onsubmit="bestilt()" action="index.html">
+                    <form onsubmit="bestilt()">
 
                         <fieldset>
                             <legend>Medlemskap</legend>
@@ -108,7 +85,7 @@
             </article>
             
 
-        </div>
+        </section>
  
         
     </main>

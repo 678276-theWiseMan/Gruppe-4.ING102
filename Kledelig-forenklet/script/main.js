@@ -185,17 +185,7 @@ async function toggleFavoritt(element) {
     element.classList.toggle('active');
 }
 
-//Handlekurv
-function bestilt(){
-	if(medl != null)
-		alert("Takk for bestillingen!");
-	else{
-		alert("Du må være medlem");
-	}
-}
-
 // MEDLEMSKAP
-
 class Medlemskap {
 	constructor(maxPlagg, antallPlagg, navn){
 		this.navn = navn;
@@ -260,7 +250,9 @@ function getMedlemskap(buttonID){
 
 }
 
-// MEDLEMSKAP i dinkonto.html
+// MEDLEMSKAP i dinkonto.html og handlekurv
+let medl = JSON.parse(localStorage.getItem("medlemskap"));
+
 function avslutteMedlemskap(){
 	localStorage.removeItem('medlemskap');
 
@@ -270,22 +262,26 @@ function avslutteMedlemskap(){
 	window.location.reload();
 }
 
-let medl = JSON.parse(localStorage.getItem("medlemskap"));
 if (medl != null){
 	try{
 		let kontomedlemskap = document.getElementById('dittMedlemskapId');
 		kontomedlemskap.innerHTML =
 		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
 		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n' +
+		'<strong>' +
 		'<a href="kontakt/medlemskap.html">Endre</a>' + '<br><br>' +
-		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>';
+		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>' +
+		'</strong>';
 	} catch(e){
-		let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
-		kontomedlemskap.innerHTML =
-		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
-		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n';
+		try{
+			let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
+			kontomedlemskap.innerHTML =
+			'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+			'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></p>\n';
+		}catch(e){
+			console.log("Element not found.")
+		}
 	}
-
 }
 else{
 	try{
@@ -294,10 +290,71 @@ else{
 		'<p>Du har ingen medlemskap<p>\n'+ 
 		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
 	} catch(e){
-		let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
-		kontomedlemskap.innerHTML =
-		'<p>Du har ingen medlemskap<p>\n'+ 
-		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+		try{
+			let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
+			kontomedlemskap.innerHTML =
+			'<p>Du har ingen medlemskap<p>\n'+ 
+			'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+		} catch(e){
+			console.log("Element not found.")
+		}
+
 	}
+
+}
+
+//HANDLEKURV
+class PlaggIHandlekurv {
+	constructor(id, name, size, picture){
+		this.id = id; 
+		this.name = name;
+		this.size = size;
+		this.picture = picture;
+	}
+}
+
+let sizesTekstil = [46, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 110, 116, 122, 128, 134, 140, 146, 152];
+let sizesSko = [];
+for (let i = 19; i <= 36; i++){
+	sizesSko.push(i);
+}
+
+
+const body2Img = new Image();
+body2Img.src = "../grafikk/produkter/body2.jpeg";
+const body2_86 = new PlaggIHandlekurv(001, 'Joha Body', 86, body2Img);
+
+const body2_74 = new PlaggIHandlekurv(002, 'Joha Body', 74, body2Img);
+
+const sko2Img = new Image();
+sko2Img.src = "../grafikk/produkter/sko2.jpeg";
+const sko2_24 = new PlaggIHandlekurv(003, 'Superfit Støvler', 24, sko2Img);
+ 
+let minHandlekurv = [body2_86, body2_74, sko2_24];
+
+function bestilt(){
+	if(medl != null) {
+		let check1 = medl.antallPlagg;
+		let check2 = minHandlekurv.length;
+		if((check1 + check2) <= medl.maxPlagg){
+			medl.antallPlagg += minHandlekurv.length;
+			localStorage.setItem('medlemskap', JSON.stringify(medl));
+			alert("Takk for bestillingen!");
+			location.href = '../index.html';
+		} else{
+			alert("For mye i handlekurven");
+		}
+	}
+	
+	else{
+		alert("Du må være medlem");
+	}
+}
+
+function leggTilHandlekurv(PlaggIHandlekurv){
+
+}
+
+function fjernFraHandlekurv(plaggId){
 
 }
