@@ -169,7 +169,7 @@
 }
 
 a.button {
-    background: linear-gradient(var(--toneNavShade),var(--toneNav));
+    background: linear-gradient(black, black);
     color: #fff;
     background-color: transparent;
     padding: 8px 13px;
@@ -178,7 +178,13 @@ a.button {
     cursor: pointer;
     align-items: center;
     text-decoration: none;
-    box-shadow: var(--boxShadow);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .størrelseUtvalg {
