@@ -350,6 +350,7 @@ if(finnesHandlekurv == null){
 	let minHandlekurv = [sko2S24];
 	localStorage.setItem("handlekurv", JSON.stringify(minHandlekurv));
 }
+
 let minHandlekurv = JSON.parse(localStorage.getItem('handlekurv'));
 
 for (let i = 0; i < minHandlekurv.length; i++){
@@ -453,9 +454,17 @@ function fjernFraHandlekurv(thisElement){
 }
 
 // Vis hvor mange plagg er det i handlekurven
-const antallPlagg = document.getElementById("antallplaggIhk");
-const showPlagg = document.createElement('h3');
-showPlagg.innerText = minHandlekurv.length + " plagg i handlekurven";
-antallPlagg.appendChild(showPlagg);
+if (minHandlekurv.length > 0) {
+	const antallPlagg = document.getElementById("antallplaggIhk");
+	const showPlagg = document.createElement('h3');
+	showPlagg.innerText = minHandlekurv.length + " plagg i handlekurven";
+	antallPlagg.appendChild(showPlagg);
+}else {
+	const antallPlagg = document.getElementById("antallplaggIhk");
+	const showPlagg = document.createElement('h3');
+	showPlagg.innerText = "Handlekurven er tom! :(";
+	antallPlagg.appendChild(showPlagg);
+}
+
 
 
