@@ -303,8 +303,8 @@ else{
 
 }
 
-//HANDLEKURV
-class PlaggIHandlekurv {
+//mini "DATABASE" med plagg
+class Garment {
 	constructor(id, name, size, picture){
 		this.id = id; 
 		this.name = name;
@@ -319,18 +319,44 @@ for (let i = 19; i <= 36; i++){
 	sizesSko.push(i);
 }
 
+const body1S56 = new Garment(01, '"Hello" Body', 56, "grafikk/produkter/body1.jpeg");
 
-const body2Img = new Image();
-body2Img.src = "../grafikk/produkter/body2.jpeg";
-const body2_86 = new PlaggIHandlekurv(001, 'Joha Body', 86, body2Img);
+const body2S86 = new Garment(02, 'Joha Body', 86, "grafikk/produkter/body2.jpeg");
 
-const body2_74 = new PlaggIHandlekurv(002, 'Joha Body', 74, body2Img);
+const jakke1S128 = new Garment(03, 'Reima Jakke', 128, "grafikk/produkter/jakke1.jpeg");
 
-const sko2Img = new Image();
-sko2Img.src = "../grafikk/produkter/sko2.jpeg";
-const sko2_24 = new PlaggIHandlekurv(003, 'Superfit Støvler', 24, sko2Img);
- 
-let minHandlekurv = [body2_86, body2_74, sko2_24];
+const jakke2S98 = new Garment(04, 'Didrikson Jakke', 98, "grafikk/produkter/jakke2.jpeg");
+
+const sko1S35 = new Garment(05, 'Superfit Joggesko', 35, "grafikk/produkter/sko1.jpeg");
+
+const sko2S24 = new Garment(06, 'Superfit Støvler', 24, "grafikk/produkter/sko2.jpeg");
+
+const sko3S24 = new Garment(07, 'Viking Støvler', 29, "grafikk/produkter/sko3.jpeg");
+
+const stromper1S116 = new Garment(08, 'Fixoni Strømper', 116, "grafikk/produkter/stromper1.jpeg");
+
+const votter1SG3 = new Garment(09, 'Reflex Votter', 3, "grafikk/produkter/votter1.jpeg");
+
+const hansker2SG2 = new Garment(010, 'Reima Hansker', 2, "grafikk/produkter/hansker2.jpeg");
+
+
+let allePlagg = [body1S56, body2S86, jakke1S128, jakke2S98, sko1S35, sko2S24, sko3S24, stromper1S116, votter1SG3, hansker2SG2]
+localStorage.setItem("alleplag", JSON.stringify(allePlagg));
+
+//HANDLEKURV
+let finnesHandlekurv = localStorage.getItem("handlekurv");
+
+if(finnesHandlekurv == null){
+	let minHandlekurv = [sko2S24];
+	localStorage.setItem("handlekurv", JSON.stringify(minHandlekurv));
+}
+let minHandlekurv = JSON.parse(localStorage.getItem('handlekurv'));
+
+for (let i = 0; i < minHandlekurv.length; i++){
+	visHandlekurv(minHandlekurv[i]);
+}
+
+
 
 function bestilt(){
 	if(medl != null) {
@@ -339,6 +365,8 @@ function bestilt(){
 		if((check1 + check2) <= medl.maxPlagg){
 			medl.antallPlagg += minHandlekurv.length;
 			localStorage.setItem('medlemskap', JSON.stringify(medl));
+			minHandlekurv = [];
+			localStorage.setItem("handlekurv", JSON.stringify(minHandlekurv));
 			alert("Takk for bestillingen!");
 			location.href = '../index.html';
 		} else{
@@ -351,10 +379,83 @@ function bestilt(){
 	}
 }
 
-function leggTilHandlekurv(PlaggIHandlekurv){
+function randomPlg(){
+	return allePlagg[Math.floor(Math.random() * allePlagg.length)];
+} 
 
+
+function visHandlekurv(minGarment){
+	const ulHandlekurv = document.querySelector("#handlekurvUL");
+
+	// <li class="produktGrid2"></li>
+	const newLi = document.createElement('li');
+	newLi.setAttribute("class", "produktGrid2");
+
+	//topDiv
+	const topDiv = document.createElement('div');
+	topDiv.setAttribute("class", "produkttekst");
+
+	const newName = document.createElement('h3');
+	newName.innerText = minGarment.name;
+	topDiv.appendChild(newName);
+
+	const newSize = document.createElement('p');
+	newSize.innerText = 'Størrelse: ' + minGarment.size;
+	topDiv.appendChild(newSize);
+
+	//bottomDiv
+	const bottomDiv = document.createElement('div');
+	bottomDiv.setAttribute("class", "produktbildet");
+
+	let newPicture = new Image();
+	newPicture.src = minGarment.picture;
+
+	bottomDiv.appendChild(newPicture);
+
+	//fjernButton
+	const fjernButton = document.createElement('button');
+	fjernButton.setAttribute("onclick", "fjernFraHandlekurv(this)");
+	fjernButton.innerText = "Fjern";
+	
+	//newLi
+	newLi.appendChild(topDiv);
+	newLi.appendChild(bottomDiv);
+	newLi.appendChild(fjernButton);
+	ulHandlekurv.appendChild(newLi);
+
+	for(let i = 0; i < minHandlekurv.length; i++){
+		if(minHandlekurv[i].id == minGarment.id){
+			newLi.setAttribute("id", minHandlekurv[i].id);
+		} 
+	}
 }
 
-function fjernFraHandlekurv(plaggId){
+function leggTilHandlekurv(minGarment){
 
+	visHandlekurv(minGarment);
+	let minHandlekurv = JSON.parse(localStorage.getItem('handlekurv'));
+	minHandlekurv.push(minGarment);
+	localStorage.setItem('handlekurv', JSON.stringify(minHandlekurv));
+	location.reload()
 }
+
+function fjernFraHandlekurv(thisElement){
+
+	for(let i = 0; i < minHandlekurv.length; i++){
+		if (minHandlekurv[i].id == thisElement.parentElement.id){
+			minHandlekurv.splice(i, 1);
+			break;
+		}
+	}
+	localStorage.setItem('handlekurv', JSON.stringify(minHandlekurv));
+	thisElement.parentElement.remove();
+	location.reload()
+}
+
+// Vis hvor mange plagg er det i handlekurven
+const antallPlagg = document.getElementById("antallplaggIhk");
+const showPlagg = document.createElement('h3');
+showPlagg.innerText = minHandlekurv.length + " plagg i handlekurven";
+antallPlagg.appendChild(showPlagg);
+
+
