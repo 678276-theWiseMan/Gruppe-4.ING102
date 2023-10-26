@@ -277,15 +277,20 @@ if (medl != null){
 		kontomedlemskap.innerHTML =
 		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
 		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n' +
+		'<strong>' +
 		'<a href="kontakt/medlemskap.html">Endre</a>' + '<br><br>' +
-		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>';
+		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>' +
+		'</strong>';
 	} catch(e){
-		let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
-		kontomedlemskap.innerHTML =
-		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
-		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n';
+		try{
+			let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
+			kontomedlemskap.innerHTML =
+			'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+			'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></p>\n';
+		}catch(e){
+			console.log("Element not found.")
+		}
 	}
-
 }
 else{
 	try{
@@ -294,10 +299,15 @@ else{
 		'<p>Du har ingen medlemskap<p>\n'+ 
 		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
 	} catch(e){
-		let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
-		kontomedlemskap.innerHTML =
-		'<p>Du har ingen medlemskap<p>\n'+ 
-		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+		try{
+			let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
+			kontomedlemskap.innerHTML =
+			'<p>Du har ingen medlemskap<p>\n'+ 
+			'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+		} catch(e){
+			console.log("Element not found.")
+		}
+
 	}
 
 }
