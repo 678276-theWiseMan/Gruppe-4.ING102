@@ -188,3 +188,34 @@ async function toggleFavoritt(element) {
 function bestilt(){
 		alert("Takk for bestillingen!");
 }
+
+// MEDLEMSKAP
+class Medlemskap {
+	constructor(maxPlagg, antallPlagg, navn){
+		this.navn = navn;
+		this.maxPlagg= maxPlagg;
+		this.antallPlagg = antallPlagg;
+	}
+}
+
+let medlemskap3 = new Medlemskap(3, 0, "3-Plagg");
+let medlemskap5 = new Medlemskap(5, 0, "5-Plagg");
+let medlemskap8 = new Medlemskap(8, 0, "8-Plagg");
+let medlemskap10 = new Medlemskap(10, 0, "10-Plagg");
+
+function getMedlemskap3() {
+	localStorage.setItem("medlemskap", JSON.stringify(medlemskap3));
+	alert("Takk for kjøpet!");
+}
+function getMedlemskap5() {
+	localStorage.setItem("medlemskap", JSON.stringify(medlemskap5));
+	alert("Takk for kjøpet!");
+}
+function getMedlemskap8() {
+	localStorage.setItem("medlemskap", JSON.stringify(medlemskap8));
+	alert("Takk for kjøpet!");
+}
+function getMedlemskap10() {
+	localStorage.setItem("medlemskap", JSON.stringify(medlemskap10));
+	alert("Takk for kjøpet!");
+}

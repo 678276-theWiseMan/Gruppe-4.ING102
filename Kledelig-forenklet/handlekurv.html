@@ -42,7 +42,7 @@
                     <div class="produktbildet">
                         <img src="grafikk/produkter/sko2.jpeg" alt="kurvProdukt1">
                     </div>
-                        <button>Fjern</button>
+                        <button onclick="removeProduktIHandlekurv()">Fjern</button>
                     
                 </li>
                 <li class="produktGrid2" id="produktIHandlekurv2">
@@ -53,7 +53,7 @@
                     <div class="produktbildet">
                         <img src="grafikk/produkter/body2.jpeg" alt="kurvProdukt2">
                     </div>
-                    <button>Fjern</button>
+                    <button onclick="removeProduktIHandlekurv()">Fjern</button>
                     
                 </li>
                 <li class="produktGrid2" id="produktIHandlekurv3">
@@ -64,7 +64,7 @@
                     <div class="produktbildet">
                         <img src="grafikk/produkter/body2.jpeg" alt="kurvProdukt2">
                     </div>
-                    <button>Fjern</button>
+                    <button onclick="removeProduktIHandlekurv()">Fjern</button>
                     
                 </li>
             </ul>
@@ -73,7 +73,12 @@
                 <details><summary><span>Frakt</span><span>Frakt</span></summary>
                     <form onsubmit="bestilt()" action="index.html">
 
-                        <fieldset><legend>Din Adresse</legend>
+                        <fieldset>
+                            <legend>Medlemskap</legend>
+                            <p></p>
+                        </fieldset>
+
+                        <fieldset><legend>Adresse</legend>
                             <p><label>Etternavn</label> <input type="text" id="lastName" placeholder="F.eks. Olsen" required></p>
                             <p><label>Fornavn</label> <input type="text" id="firstName" placeholder="F.eks. Kari Hansen" required></p>
                             <p><label>E-post</label> <input type="email" id="email" placeholder="F.eks. kari@olsen.no" required></p>
@@ -84,19 +89,17 @@
 
                         <fieldset><legend>Fraktmetode</legend>
                             <div>
-                                <input type="radio" id="frakt-pakkeautomat" name="fraktmetode">
+                                <input type="radio" name="fraktmetode" value="frakt1">
                                 <label>Pakkeautomat (Gratis)</label>
-                                <input type="radio" id="frakt-butikk" name="fraktmetode">
+                                <input type="radio" name="fraktmetode" value="frakt2">
                                 <label>Hentes i butikk (59kr)</label>
-                                <input type="radio" id="frakt-hjem" name="fraktmetode">
+                                <input type="radio" name="fraktmetode" value="frakt3">
                                 <label>Hjemelevering (129kr)</label>
                             </div>
-
                         </fieldset>
 
                         <div class="actions">
-                            <input type="reset" value="Nullstill">
-                            <input type="submit" value="Bestill">
+                            <input type="submit" value="GODKJENN OG BESTILL">
                         </div>
                     </form>
                 </details>
