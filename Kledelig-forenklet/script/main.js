@@ -185,8 +185,13 @@ async function toggleFavoritt(element) {
     element.classList.toggle('active');
 }
 
+//Handlekurv
 function bestilt(){
+	if(medl != null)
 		alert("Takk for bestillingen!");
+	else{
+		alert("Du må være medlem");
+	}
 }
 
 // MEDLEMSKAP
@@ -255,23 +260,44 @@ function getMedlemskap(buttonID){
 
 }
 
-// Medlemskap i dinkonto.html
+// MEDLEMSKAP i dinkonto.html
 function avslutteMedlemskap(){
 	localStorage.removeItem('medlemskap');
+
 	harMedlemskap = false;
+	localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
+
 	window.location.reload();
 }
 
 let medl = JSON.parse(localStorage.getItem("medlemskap"));
 if (medl != null){
-	let kontomedlemskap = document.getElementById('dittMedlemskapId');
-	kontomedlemskap.innerHTML = '<p>Ditt medlemskap: <strong>' + medl.navn + '<strong><p>\n' +
-	'<a href="kontakt/medlemskap.html">Endre</a>' +
-	'<div><a onclick="avslutteMedlemskap()" href="">Avslutte</a><div>';
+	try{
+		let kontomedlemskap = document.getElementById('dittMedlemskapId');
+		kontomedlemskap.innerHTML =
+		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n' +
+		'<a href="kontakt/medlemskap.html">Endre</a>' + '<br><br>' +
+		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>';
+	} catch(e){
+		let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
+		kontomedlemskap.innerHTML =
+		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n';
+	}
+
 }
 else{
-	let kontomedlemskap = document.getElementById('dittMedlemskapId');
-	kontomedlemskap.innerHTML = '<p>Du har ingen medlemskap<p>\n'+ 
-	'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
-}
+	try{
+		let kontomedlemskap = document.getElementById('dittMedlemskapId');
+		kontomedlemskap.innerHTML =
+		'<p>Du har ingen medlemskap<p>\n'+ 
+		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+	} catch(e){
+		let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
+		kontomedlemskap.innerHTML =
+		'<p>Du har ingen medlemskap<p>\n'+ 
+		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+	}
 
+}
