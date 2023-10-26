@@ -205,34 +205,35 @@ let medlemskap8 = new Medlemskap(8, 0, "8-Plagg");
 let medlemskap10 = new Medlemskap(10, 0, "10-Plagg");
 
 let harMedlemskap = new Boolean();
-let mittMedlemskap = localStorage.getItem("harmedlemskap");
 
-if (mittMedlemskap != "true"){
+if (localStorage.getItem("harMedlemskap") != "true"){
 	harMedlemskap = false;
-	localStorage.setItem("medlemskap", JSON.stringify(harMedlemskap));
+	localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
 }
 
-function getMedlemskap3() {
-	localStorage.setItem("medlemskap", JSON.stringify(medlemskap3));
+function getMedlemskap(buttonID){
+
+	let typeMedlemskap = null;
+
+	switch(buttonID){
+		case '03plagg':
+			typeMedlemskap = medlemskap3;
+			break;
+		case '05plagg':
+			typeMedlemskap = medlemskap5;
+			break;
+		case '08plagg':
+			typeMedlemskap = medlemskap8;
+			break;
+		case '010plagg':
+			typeMedlemskap = medlemskap10;
+			break;
+		default:
+			console.log("Feil oppstod.");
+	}
+
+	localStorage.setItem("medlemskap", JSON.stringify(typeMedlemskap));
 	harMedlemskap = true;
-	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
-	alert("Takk for kjøpet!");
-}
-function getMedlemskap5() {
-	localStorage.setItem("medlemskap", JSON.stringify(medlemskap5));
-	harMedlemskap = true;
-	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
-	alert("Takk for kjøpet!");
-}
-function getMedlemskap8() {
-	localStorage.setItem("medlemskap", JSON.stringify(medlemskap8));
-	harMedlemskap = true;
-	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
-	alert("Takk for kjøpet!");
-}
-function getMedlemskap10() {
-	localStorage.setItem("medlemskap", JSON.stringify(medlemskap10));
-	harMedlemskap = true;
-	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
-	alert("Takk for kjøpet!");
+	localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
+	alert('Takk for kjøpet!\n\n' + 'Nå har du "' + typeMedlemskap.navn + '" medlemskap.');
 }
