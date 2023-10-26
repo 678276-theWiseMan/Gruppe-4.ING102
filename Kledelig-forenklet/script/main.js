@@ -190,6 +190,7 @@ function bestilt(){
 }
 
 // MEDLEMSKAP
+
 class Medlemskap {
 	constructor(maxPlagg, antallPlagg, navn){
 		this.navn = navn;
@@ -203,19 +204,35 @@ let medlemskap5 = new Medlemskap(5, 0, "5-Plagg");
 let medlemskap8 = new Medlemskap(8, 0, "8-Plagg");
 let medlemskap10 = new Medlemskap(10, 0, "10-Plagg");
 
+let harMedlemskap = new Boolean();
+let mittMedlemskap = localStorage.getItem("harmedlemskap");
+
+if (mittMedlemskap != "true"){
+	harMedlemskap = false;
+	localStorage.setItem("medlemskap", JSON.stringify(harMedlemskap));
+}
+
 function getMedlemskap3() {
 	localStorage.setItem("medlemskap", JSON.stringify(medlemskap3));
+	harMedlemskap = true;
+	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
 	alert("Takk for kjøpet!");
 }
 function getMedlemskap5() {
 	localStorage.setItem("medlemskap", JSON.stringify(medlemskap5));
+	harMedlemskap = true;
+	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
 	alert("Takk for kjøpet!");
 }
 function getMedlemskap8() {
 	localStorage.setItem("medlemskap", JSON.stringify(medlemskap8));
+	harMedlemskap = true;
+	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
 	alert("Takk for kjøpet!");
 }
 function getMedlemskap10() {
 	localStorage.setItem("medlemskap", JSON.stringify(medlemskap10));
+	harMedlemskap = true;
+	localStorage.setItem("harmedlemskap", JSON.stringify(harMedlemskap));
 	alert("Takk for kjøpet!");
 }
