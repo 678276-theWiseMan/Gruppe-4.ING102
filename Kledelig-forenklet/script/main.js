@@ -211,29 +211,67 @@ if (localStorage.getItem("harMedlemskap") != "true"){
 	localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
 }
 
+
 function getMedlemskap(buttonID){
 
-	let typeMedlemskap = null;
+	let accountData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+	
+	if (accountData != null){
 
-	switch(buttonID){
-		case '03plagg':
-			typeMedlemskap = medlemskap3;
-			break;
-		case '05plagg':
-			typeMedlemskap = medlemskap5;
-			break;
-		case '08plagg':
-			typeMedlemskap = medlemskap8;
-			break;
-		case '010plagg':
-			typeMedlemskap = medlemskap10;
-			break;
-		default:
-			console.log("Feil oppstod.");
+		let typeMedlemskap = null;
+
+		switch(buttonID){
+			case '03plagg':
+				typeMedlemskap = medlemskap3;
+				break;
+			case '05plagg':
+				typeMedlemskap = medlemskap5;
+				break;
+			case '08plagg':
+				typeMedlemskap = medlemskap8;
+				break;
+			case '010plagg':
+				typeMedlemskap = medlemskap10;
+				break;
+			default:
+				console.log("Feil oppstod.");
+		}
+	
+		localStorage.setItem("medlemskap", JSON.stringify(typeMedlemskap));
+
+		harMedlemskap = true;
+		localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
+
+		
+		alert('Takk for kjøpet!\n\n' + 'Nå har du "' + typeMedlemskap.navn + '" medlemskap.');
+
+		location.href = '../index.html';
+	
+	} else{
+		alert('Du må ha en konto!');
+		location.href = '../dinkonto.html';
 	}
 
-	localStorage.setItem("medlemskap", JSON.stringify(typeMedlemskap));
-	harMedlemskap = true;
-	localStorage.setItem("harMedlemskap", JSON.stringify(harMedlemskap));
-	alert('Takk for kjøpet!\n\n' + 'Nå har du "' + typeMedlemskap.navn + '" medlemskap.');
+
 }
+
+// Medlemskap i dinkonto.html
+function avslutteMedlemskap(){
+	localStorage.removeItem('medlemskap');
+	harMedlemskap = false;
+	window.location.reload();
+}
+
+let medl = JSON.parse(localStorage.getItem("medlemskap"));
+if (medl != null){
+	let kontomedlemskap = document.getElementById('dittMedlemskapId');
+	kontomedlemskap.innerHTML = '<p>Ditt medlemskap: <strong>' + medl.navn + '<strong><p>\n' +
+	'<a href="kontakt/medlemskap.html">Endre</a>' +
+	'<div><a onclick="avslutteMedlemskap()" href="">Avslutte</a><div>';
+}
+else{
+	let kontomedlemskap = document.getElementById('dittMedlemskapId');
+	kontomedlemskap.innerHTML = '<p>Du har ingen medlemskap<p>\n'+ 
+	'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+}
+
