@@ -282,8 +282,8 @@ if (medl != null){
 		try{
 			let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
 			kontomedlemskap.innerHTML =
-			'<h3>Ditt medlemskap: <strong>' + medl.navn + '</strong></h3>\n' +
-			'<h3>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></h3>\n';
+			'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+			'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></p>\n';
 		}catch(e){
 			console.log("Element not found.")
 		}
