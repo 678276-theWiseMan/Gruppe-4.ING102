@@ -117,6 +117,7 @@ nav a.active {
 }
 /* MERK: Klassen shadow er tenkt for meny-elementer som ikke skal vises i menyen: */
 nav li.shadow {
+	display: none;
 	background: white;
 	padding: .2rem;
 	border-radius: .2rem;
