@@ -401,6 +401,7 @@ function visHandlekurv(minGarment){
 
 	let newPicture = new Image();
 	newPicture.src = minGarment.picture;
+	newPicture.setAttribute("alt", "Plagg_" + minGarment.name);
 
 	bottomDiv.appendChild(newPicture);
 
