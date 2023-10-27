@@ -425,8 +425,13 @@ function visHandlekurv(minGarment){
 	}
 }
 
-function plaggFraVaredetalj(){
-	minHandlekurv.push(jakke2S98);
+function plaggFraVaredetalj(ID){
+	for(let plagg of allePlagg){
+		if(ID == plagg.id){
+			minHandlekurv.push(plagg);
+			break;
+		}
+	}
 	localStorage.setItem('handlekurv', JSON.stringify(minHandlekurv));
 }
 
