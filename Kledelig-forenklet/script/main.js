@@ -313,12 +313,6 @@ class Garment {
 	}
 }
 
-let sizesTekstil = [46, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 110, 116, 122, 128, 134, 140, 146, 152];
-let sizesSko = [];
-for (let i = 19; i <= 36; i++){
-	sizesSko.push(i);
-}
-
 const body1S56 = new Garment(01, '"Hello" Body', 56, "grafikk/produkter/body1.jpeg");
 
 const body2S86 = new Garment(02, 'Joha Body', 86, "grafikk/produkter/body2.jpeg");
@@ -340,7 +334,7 @@ const votter1SG3 = new Garment(09, 'Reflex Votter', 3, "grafikk/produkter/votter
 const hansker2SG2 = new Garment(010, 'Reima Hansker', 2, "grafikk/produkter/hansker2.jpeg");
 
 
-let allePlagg = [body1S56, body2S86, jakke1S128, jakke2S98, sko1S35, sko2S24, sko3S24, stromper1S116, votter1SG3, hansker2SG2]
+const allePlagg = [body1S56, body2S86, jakke1S128, jakke2S98, sko1S35, sko2S24, sko3S24, stromper1S116, votter1SG3, hansker2SG2]
 localStorage.setItem("alleplag", JSON.stringify(allePlagg));
 
 //HANDLEKURV
@@ -357,8 +351,6 @@ for (let i = 0; i < minHandlekurv.length; i++){
 	visHandlekurv(minHandlekurv[i]);
 }
 
-
-
 function bestilt(){
 	if(medl != null) {
 		let check1 = medl.antallPlagg;
@@ -374,7 +366,6 @@ function bestilt(){
 			alert("For mye i handlekurven");
 		}
 	}
-	
 	else{
 		alert("Du må være medlem");
 	}
@@ -431,6 +422,11 @@ function visHandlekurv(minGarment){
 	}
 }
 
+function plaggFraVaredetalj(){
+	minHandlekurv.push(jakke2S98);
+	localStorage.setItem('handlekurv', JSON.stringify(minHandlekurv));
+}
+
 function leggTilHandlekurv(minGarment){
 
 	visHandlekurv(minGarment);
@@ -453,7 +449,7 @@ function fjernFraHandlekurv(thisElement){
 	location.reload()
 }
 
-// Vis hvor mange plagg er det i handlekurven
+// Viser hvor mange plagg er det i handlekurven
 if (minHandlekurv.length > 0) {
 	const antallPlagg = document.getElementById("antallplaggIhk");
 	const showPlagg = document.createElement('h3');
@@ -465,6 +461,3 @@ if (minHandlekurv.length > 0) {
 	showPlagg.innerText = "Handlekurven er tom! :(";
 	antallPlagg.appendChild(showPlagg);
 }
-
-
-
