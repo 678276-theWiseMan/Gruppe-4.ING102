@@ -33,8 +33,10 @@
         <section class="korg">
             <button onclick="leggTilHandlekurv(randomPlg())">Add Random</button>
 
+            <h2>Handlekurv</h2>
+            <ul id="handlekurvUL"></ul>
+            <section id="antallplaggIhk"></section>
             <article>
-                <h2>Handlekurv</h2>
                 <details><summary><span>Frakt</span><span>Frakt</span></summary>
                     <form onsubmit="bestilt()">
 
@@ -66,7 +68,7 @@
                         </fieldset>
 
                         <div class="actions">
-                            <input type="submit" value="GODKJENN OG BESTILL">
+                            <input type="submit" value="GODKJENN OG BESTILL" id="godkjennogbestill">
                         </div>
                     </form>
                 </details>
