@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/combined.css">
+    <script src="script/main.js"></script>
+    <title>Varedetalj</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo box1"><a href="index.html"><img src="grafikk/logo.svg" alt="Logo for Kledeli" title="Til framsida for kledeli"></a></h1>
+        <div class="searchbar-div">
+            <input class="searchbar" type="search" placeholder="Søk">
+            <button>Search</button>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="kategorier.html">Kategorier</a></li>
+                <li><a href="dinkonto.html">Din Konto</a></li>
+                <li><a href="omoss.html">Om Oss</a></li>
+                <li><a href="handlekurv.html">Handlekurv</a></li>
+                <li class="shadow"><a class="active" href="varedetalj-sko1.html">Varedetalj</a></li>
+                <li class="shadow"><a href="varelistevisning-sko.html">Varelistevisning</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="produktDetalj" id="sko2">
+            <figure>
+                <img src="grafikk/produkter/sko2.jpeg" alt="Produkt 1">
+            </figure>
+            <div class="text-container">
+                    <h2>Kid's Vinter Støvler</h2>
+                    <p>
+                        <b>Produktinformasjon</b>
+                    </p>
+                    <p class="Produktbeskrivelse">
+                        Introduserer vår "Kid's Vinter Støvler".
+                        Trinn inn i vinteren med varme og stil med vår vinter støvler, spesialdesignet for de yngste fra aldren 0-12 år!
+                        støvlene er ikke bare robust og varm, men de er også laget med respekt for naturen og vår planets velferd.
+                        Hver støvel er skapt med tanke av bærekraftige, miljøvennlige materialer som sørger for at hvert barns skritt er et skritt mot en sunnere
+                        og mer bærekraftig verden.
+                    </p>
+                    <ul class="Produktbeskrivelse">
+                        <li>Laget av høykvalitets, miljøvennlige tekstiler som er nøye valgt for å redusere miljøavtrykket.</li>
+                        <li>Stoffet er slitesterkt, varm, vanntett og skånsomt mot barnets hud, samtidig som det sikrer optimal pusteevne og komfort.</li>
+                    </ul>
+                    
+                <div class="størrelseUtvalg">
+                    <label for="størrelse">Velg en størrelse:</label>
+                    <select id="størrelse" name="størrelse">
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="16">20</option>
+                        <option value="17">21</option>
+                        <option value="18">22</option>
+                        <option value="19">23</option>
+
+                    </select>
+                </div>
+                <a onclick="plaggFraVaredetalj()" href="handlekurv.html" class="button">Legg til handlekurv</a>
+            </div>
+        </div>
+
+        <section class="anbefaling">
+            <h3>Anbefalte Produkter</h3>
+            <div class="container-grid">
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj-sko1.html">
+                            <img src="grafikk/produkter/sko1.jpeg" alt="Produkt 2" >
+                                <h4>Kid's Joggesko</h4>
+                    </a>
+                </section>
+
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj-jakke2.html">
+                            <img src="grafikk/produkter/jakke2.jpeg" alt="Produkt 3" >
+                                <h4>Eco-Friendly Ytterjakke</h4>
+                    </a>
+                </section>
+
+                <section class="produktGrid">
+                    <div class="favoritt" onclick="toggleFavoritt(this)">&#9829;</div>
+                    <a href="varedetalj-body1.html">
+                            <img src="grafikk/produkter/body1.jpeg" alt="Produkt 4" >
+                                <h4>Kid's Undertøy</h4>
+                    </a>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <aside></aside>
+    <footer>
+    	<ul>
+    		<li><a href="kontakt/medlemskap.html">Medlemskaps-info</a></li>
+    		<li><a href="kontakt/personvernerklaering.html">Personvernerklæring</a></li>
+    		<li><a href="kontakt/tilgjengelighetserklaering.html">Tilgjengelighetserklæring</a></li>
+    	</ul>
+    </footer>
+</body>
+</html>
