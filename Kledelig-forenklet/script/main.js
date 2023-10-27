@@ -153,8 +153,10 @@ function updateSearchBtn(){
 			}
 			searchBar.innerHTML = `
 			<form action="${action}" method="get" class="searchbar">
-                <input class="searchbar" type="search" placeholder="Søk" name="q">
-                <input type="submit" name="Søk" value="Søk">
+                <input class="searchbar" type="search" placeholder="Søk" name="q" id="searchbarBar">
+                <label for="searchbarBar">
+					<button ttype="submit" name="Søk" value="Søk">Søk</button>
+				</label>
             </form>
 			`;		
 		}else{
@@ -266,7 +268,7 @@ if (medl != null){
 	try{
 		let kontomedlemskap = document.getElementById('dittMedlemskapId');
 		kontomedlemskap.innerHTML =
-		'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
+		'<h3>Ditt medlemskap: <strong>' + medl.navn + '</strong></h3>\n' +
 		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n' +
 		'<strong>' +
 		'<a href="kontakt/medlemskap.html">Endre</a>' + '<br><br>' +
@@ -276,8 +278,8 @@ if (medl != null){
 		try{
 			let kontomedlemskap = document.getElementById('dittMedlemskapHandlekurvId');
 			kontomedlemskap.innerHTML =
-			'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
-			'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></p>\n';
+			'<h3>Ditt medlemskap: <strong>' + medl.navn + '</strong></h3>\n' +
+			'<h3>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></h3>\n';
 		}catch(e){
 			console.log("Element not found.")
 		}
