@@ -222,7 +222,7 @@ footer {
 	color: white;
 	display: flex;
 	justify-content: flex-start;
-	align-items: top;
+	align-items: flex-start;
 	padding-right: 14vw;
 }
 
