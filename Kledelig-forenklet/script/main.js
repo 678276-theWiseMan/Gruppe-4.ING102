@@ -255,6 +255,10 @@ function getMedlemskap(buttonID){
 // MEDLEMSKAP i dinkonto.html og handlekurv
 let medl = JSON.parse(localStorage.getItem("medlemskap"));
 
+function navigateToLink(url) {
+    window.location.replace(url);
+}
+
 function avslutteMedlemskap(){
 	localStorage.removeItem('medlemskap');
 
@@ -271,7 +275,7 @@ if (medl != null){
 		'<h3>Ditt medlemskap: <strong>' + medl.navn + '</strong></h3>\n' +
 		'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + '</strong> plagg igjen</p>\n' +
 		'<strong>' +
-		'<a href="kontakt/medlemskap.html">Endre</a>' + '<br><br>' +
+		'<a onclick="navigateToLink(\'kontakt/medlemskap.html\')">Endre</a><br><br>' +
 		'<a onclick="avslutteMedlemskap()" href="">Avslutte</a>' +
 		'</strong>';
 	} catch(e){
@@ -290,13 +294,13 @@ else{
 		let kontomedlemskap = document.getElementById('dittMedlemskapId');
 		kontomedlemskap.innerHTML =
 		'<p>Du har ingen medlemskap<p>\n'+ 
-		'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+		'<a onclick="navigateToLink(\'kontakt/medlemskap.html\')"><h3>Bli medlem!</h3></a>';
 	} catch(e){
 		try{
 			let kontomedlemskap = document.getElementById('kjopmedlemskapHandlekurvId');
 			kontomedlemskap.innerHTML =
 			'<p>Du har ingen medlemskap<p>\n'+ 
-			'<a href="kontakt/medlemskap.html"><h3>Bli medlem!<h3></a>';
+			'<a onclick="navigateToLink(\'kontakt/medlemskap.html\')"><h3>Bli medlem!</h3></a>';
 		} catch(e){
 			console.log("Element not found.")
 		}
