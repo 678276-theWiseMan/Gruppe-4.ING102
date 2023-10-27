@@ -15,10 +15,10 @@
 }
 
 body {
-	background: var(--toneWarmXtraDark);
+	background: var(--toneWarmXtraDark,hsl(352,53%,37%));
 	padding: 0;
 	margin: 0;
-	font-family: var(--standardText);
+	font-family: var(--standardText,Arial,Helvetica,sans-serif);
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
@@ -26,23 +26,23 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--headingFonts);
-	color: var(--toneWarmDark);
+	font-family: var(--headingFonts,Tahoma,sans-serif);
+	color: var(--toneWarmDark,hsl(352,62%,50%));
 }
 
 
 
 a {
-	color: var(--toneNav);
+	color: var(--toneNav,hsl(185,89%,16%));
 	text-decoration: none;
 }
 
 button {
 	padding: .6rem;
 	color: white;
-	background: linear-gradient(var(--toneNavShade),var(--toneNav));
+	background: linear-gradient(var(--toneNavShade,hsl(105,89%,16%)),var(--toneNav,hsl(185,89%,16%)));
 	border: none;
-	box-shadow: var(--boxShadow);
+	box-shadow: var(--boxShadow,.2rem .2rem 0 rgba(0,0,0,.4));
 	
 }
 
@@ -56,7 +56,7 @@ input {
 
 header, footer {
 	margin: 0;
-	background: var(--toneDark);
+	background: var(--toneDark,hsl(111,25%,87%));
 	width: 100%;
 	padding: .4rem 1.4rem;
 }
@@ -75,9 +75,9 @@ header input[type=submit] {
 	width: clamp(2rem,100%,3rem);
 	padding: .6rem;
 	color: white;
-	background: linear-gradient(var(--toneNavShade),var(--toneNav));
+	background: linear-gradient(var(--toneNavShade,hsl(105,89%,16%)),var(--toneNav,hsl(185,89%,16%)));
 	border: none;
-	box-shadow: var(--boxShadow);
+	box-shadow: var(--boxShadow,.2rem .2rem 0 rgba(0,0,0,.4));
 }
 
 
@@ -87,7 +87,7 @@ header a {
 
 header a:hover {
 	font-weight: bold;
-	border-bottom: dotted 2px var(--toneWarmDark);
+	border-bottom: dotted 2px var(--toneWarmDark,hsl(352,62%,50%));
 	padding-bottom: .3rem;
 }
 header h1 {
@@ -112,7 +112,7 @@ nav.header-nav li {
 
 nav a.active {
 	font-weight: bold;
-	border-bottom: solid 2px var(--toneWarmDark);
+	border-bottom: solid 2px var(--toneWarmDark,hsl(352,62%,50%));
 	padding-bottom: .3rem;
 }
 /* MERK: Klassen shadow er tenkt for meny-elementer som ikke skal vises i menyen: */
@@ -167,13 +167,13 @@ nav li.shadow a:hover:before {
 
 main {
 	margin: 0;
-	background: var(--toneBright);
+	background: var(--toneBright,hsl(185,11%,95%));
 }
 
 main article,main .kategorier, main .produktvisning, main .korg {
 	width: clamp(12rem,85%,42rem);
 	margin: 2rem auto 4rem auto;
-	border: solid 2px var(--toneWarm);
+	border: solid 2px var(--toneWarm,hsl(354,21%,90%));
 	border-top: none;
 	border-bottom: none;
 	padding: 0 1.6rem 4rem 1.6rem;
@@ -187,9 +187,9 @@ main article details summary {
 	cursor: pointer;
 	font-size: .9rem;
 	padding: .6rem 1rem;
-	background: var(--toneDark);
+	background: var(--toneDark,hsl(111,25%,87%));
 	border: none;
-	box-shadow: var(--boxShadow);
+	box-shadow: var(--boxShadow,.2rem .2rem 0 rgba(0,0,0,.4));
 	margin-bottom: .4rem;
 	display: inline-block;
 }
@@ -215,7 +215,7 @@ main .kategorier, main .produktvisning, main .korg {
 
 /* Footer Core */
 footer {
-	background: var(--toneWarmXtraDark);
+	background: var(--toneWarmXtraDark,hsl(352,53%,37%));
 	background-image: url(../grafikk/logo-hvit.svg);
 	background-repeat: no-repeat;
 	background-size: clamp(4rem,10vw,10rem);
@@ -250,13 +250,13 @@ footer li {
 }
 
 footer a {
-	color: var(--toneBright);
+	color: var(--toneBright,hsl(185,11%,95%));
 	text-decoration: none;
 }
 
 footer a:hover {
 	padding-bottom: .2rem;
-	border-bottom: dotted 2px var(--toneBright);
+	border-bottom: dotted 2px var(--toneBright,hsl(185,11%,95%));
 }
 
 @media screen and (max-width: 600px) {
