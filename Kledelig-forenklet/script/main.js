@@ -461,3 +461,13 @@ if (minHandlekurv.length > 0) {
 	showPlagg.innerText = "Handlekurven er tom! :(";
 	antallPlagg.appendChild(showPlagg);
 }
+
+//index.html Velkomme 
+
+let erMedlem = localStorage.getItem('harMedlemskap');
+console.log(erMedlem);
+
+let velkommenElement = document.getElementById("VelkommenTilKledeli");
+if(erMedlem == 'false'){
+	velkommenElement.remove();
+}
