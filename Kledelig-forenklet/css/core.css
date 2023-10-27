@@ -163,6 +163,16 @@ nav li.shadow a:hover:before {
 	}
 }
 
+label {
+	font-size: .9rem;
+	color: #333;
+	font-weight: normal;
+	margin-right: .6rem;
+}
+label:after {
+	content: ":";
+}
+
 /* Main Core */
 
 main {
