@@ -8,7 +8,7 @@
 	--toneNavShade: hsl(105,89%,16%);
 	--toneBright:  hsl(185,11%,95%);
 	--toneWarm:  hsl(354,21%,90%);
-	--toneWarmDark:  hsl(352,62%,60%);
+	--toneWarmDark:  hsl(352,62%,50%);
 	--toneWarmXtraDark: hsl(352,53%,37%);
 	/* Knotter og details */
 	--boxShadow: .2rem .2rem 0 rgba(0,0,0,.4);
