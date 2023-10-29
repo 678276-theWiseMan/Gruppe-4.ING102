@@ -261,7 +261,7 @@ function getMedlemskap(buttonID){
 				typeMedlemskap = medlemskap10;
 				break;
 			default:
-				console.log("Feil oppstod.");
+				console.log('Kledelig: Feil oppstod i getMedlemskap ved switch.');
 		}
 	
 		localStorage.setItem("medlemskap", JSON.stringify(typeMedlemskap));
@@ -315,7 +315,7 @@ if (medl != null){
 			'<p>Ditt medlemskap: <strong>' + medl.navn + '</strong></p>\n' +
 			'<p>Du har: <strong>' + parseInt(medl.maxPlagg - medl.antallPlagg) + ' plagg igjen</strong></p>\n';
 		}catch(e){
-			console.log("Element not found.")
+			console.info('Kledeli: Element not found. (A)')
 		}
 	}
 }
@@ -332,7 +332,7 @@ else{
 			'<p>Du har ingen medlemskap<p>\n'+ 
 			'<a onclick="navigateToLink(\'kontakt/medlemskap.html\')"><h3>Bli medlem!</h3></a>';
 		} catch(e){
-			console.log("Element not found.")
+			console.info('Kledeli: Element not found. (B)')
 		}
 
 	}
@@ -377,14 +377,18 @@ localStorage.setItem("alleplag", JSON.stringify(allePlagg));
 let finnesHandlekurv = localStorage.getItem("handlekurv");
 
 if(finnesHandlekurv == null){
-	let minHandlekurv = [];
+	let minHandlekurv = [sko2S24];
 	localStorage.setItem("handlekurv", JSON.stringify(minHandlekurv));
 }
 
 let minHandlekurv = JSON.parse(localStorage.getItem('handlekurv'));
 
 for (let i = 0; i < minHandlekurv.length; i++){
-	visHandlekurv(minHandlekurv[i]);
+	try{
+		visHandlekurv(minHandlekurv[i]);
+	}catch(e){
+		console.info('Kledeli: visHandlekurv-sløyfe: ' + e);
+	}
 }
 
 function bestilt(){
@@ -447,11 +451,13 @@ function visHandlekurv(minGarment){
 	fjernButton.innerText = "Fjern";
 	
 	//newLi
-	newLi.appendChild(topDiv);
-	newLi.appendChild(bottomDiv);
-	newLi.appendChild(fjernButton);
-	ulHandlekurv.appendChild(newLi);
-
+	if (!!ulHandlekurv){
+		newLi.appendChild(topDiv);
+		newLi.appendChild(bottomDiv);
+		newLi.appendChild(fjernButton);
+		ulHandlekurv.appendChild(newLi);
+	}
+	
 	for(let i = 0; i < minHandlekurv.length; i++){
 		if(minHandlekurv[i].id == minGarment.id){
 			newLi.setAttribute("id", minHandlekurv[i].id);
@@ -492,14 +498,15 @@ function fjernFraHandlekurv(thisElement){
 }
 
 // Viser hvor mange plagg det er i handlekurven
-if (minHandlekurv.length > 0) {
-	const antallPlagg = document.getElementById("antallplaggIhk");
-	const showPlagg = document.createElement('h3');
-	showPlagg.innerText = minHandlekurv.length + " plagg i handlekurven";
-	antallPlagg.appendChild(showPlagg);
-}else {
-	const antallPlagg = document.getElementById("antallplaggIhk");
-	const showPlagg = document.createElement('h3');
-	showPlagg.innerText = "Handlekurven er tom! :(";
-	antallPlagg.appendChild(showPlagg);
+const antallPlagg = document.getElementById("antallplaggIhk");
+if (!!antallPlagg){
+	if (minHandlekurv.length > 0) {
+		const showPlagg = document.createElement('h3');
+		showPlagg.innerText = minHandlekurv.length + " plagg i handlekurven";
+		antallPlagg.appendChild(showPlagg);
+	}else {
+		const showPlagg = document.createElement('h3');
+		showPlagg.innerText = "Handlekurven er tom! :(";
+		antallPlagg.appendChild(showPlagg);
+	}
 }
