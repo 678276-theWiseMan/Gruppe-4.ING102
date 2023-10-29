@@ -123,18 +123,42 @@ async function visKontoData(){
 }
 
 function updateFooter(){
-	let firmaOpplysninger = document.createElement('div');
-	firmaOpplysninger.id = 'firmaOpplysninger';
-	firmaOpplysninger.innerHTML = `
-		<h3>Firmaopplysninger</h3>
-		<ul>
-			<li>Stiftelsen Kledeli</li>
-			<li>Organisasjonsnummer: NO 92939495 MVA</li>
-			<li>Telefon: +47 900 90 733</li>
-		</ul>
-	`;
-	document.querySelector('footer').appendChild(firmaOpplysninger);
+
+	let domTarget = document.querySelector('footer');
+	
 	try {
+	
+		// Tømmer footer først
+		domTarget.innerHTML = '';
+
+		// Første link-liste i footer.
+
+		let basePath = '';
+		if (!/\/kontakt\//.test(window.location)){
+			basePath = 'kontakt/';
+		}
+		let brukerInfo = document.createElement('ul');
+		brukerInfo.innerHTML = `
+			<li><a href="${basePath}medlemskap.html">Medlemskaps-info</a></li>
+			<li><a href="${basePath}leveringssteder.html">Ut og innleveringssteder</a></li>
+			<li><a href="${basePath}personvernerklaering.html">Personvernerklæring</a></li>
+			<li><a href="${basePath}tilgjengelighetserklaering.html">Tilgjengelighetserklæring</a></li>		
+		`;
+		domTarget.appendChild(brukerInfo);
+	
+		// Andre link-liste i footer.
+	
+		let firmaOpplysninger = document.createElement('div');
+		firmaOpplysninger.id = 'firmaOpplysninger';
+		firmaOpplysninger.innerHTML = `
+			<h3>Firmaopplysninger</h3>
+			<ul>
+				<li>Stiftelsen Kledeli</li>
+				<li>Organisasjonsnummer: NO 92939495 MVA</li>
+				<li>Telefon: +47 900 90 733</li>
+			</ul>
+		`;
+		domTarget.appendChild(firmaOpplysninger);
 	
 	}catch(e){
 		console.error('Kledeli: Kunne ikke sette inn i footer: ' + e);
