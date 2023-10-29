@@ -155,9 +155,7 @@ function updateSearchBtn(){
 			<form action="${action}" method="get" class="searchbar">
 				<label for="searchbarBar">Varesøk</label>
                 <input class="searchbar" type="search" placeholder="Søk" name="q" id="searchbarBar">
-                <label for="searchbarBar">
-					<button ttype="submit" name="Søk" value="Søk">Søk</button>
-				</label>
+				<button ttype="submit" name="Søk" value="Søk">Søk</button>
             </form>
 			`;		
 		}else{
