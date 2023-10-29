@@ -281,26 +281,6 @@ footer a:hover {
 
 /** Skal senere oppdeles i egne stilalrk som importeres: **/
 
-/* searchbar.css */
-
-.searchbar-div {
-    width: 350px;
-    border: 1px black solid;
-    background-color: var(--toneBright);
-    align-items: center;
-    justify-content: center;
-
-    display:flex;
-}
-
-.searchbar {
-    max-width: 350px;
-}
-
-.searchbar img {
-    height:10px;
-}
-
 /* skjema.css */
 
 form {
@@ -309,14 +289,14 @@ form {
 
 form fieldset {
 	padding: 1rem;
-	border: solid 2px var(--toneWarm);
+	border: solid 2px var(--toneWarm,hsl(354,21%,90%));
 	border-radius: .4rem;
 	margin-bottom: 1.2rem;
 }
 
 form legend {
 	font-weight: bold;
-	color:  var(--toneWarmXtraDark);
+	color:  var(--toneWarmXtraDark,hsl(352,53%,37%));
 	padding: 1rem;
 }
 
@@ -359,9 +339,9 @@ form .actions input {
 	font-size: .9rem;
 	letter-spacing: .1rem;
 	padding: .9rem 1rem;
-	background: var(--toneDark);
+	background: var(--toneDark,hsl(111,25%,87%));
 	border: none;
-	box-shadow: var(--boxShadow);
+	box-shadow: var(--boxShadow,.2rem .2rem 0 rgba(0,0,0,.4));
 	margin-bottom: .4rem;
 }
 
