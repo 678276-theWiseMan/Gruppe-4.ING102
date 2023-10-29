@@ -377,7 +377,7 @@ localStorage.setItem("alleplag", JSON.stringify(allePlagg));
 let finnesHandlekurv = localStorage.getItem("handlekurv");
 
 if(finnesHandlekurv == null){
-	let minHandlekurv = [sko2S24];
+	let minHandlekurv = [];
 	localStorage.setItem("handlekurv", JSON.stringify(minHandlekurv));
 }
 
