@@ -149,10 +149,11 @@ function updateSearchBtn(){
 		if (!!searchBar){
 			let action = 'kategorier.html';
 			if (/\/kontakt\//.test(window.location)){
-				action = '../varelistevisning.html'
+				action = '../kategorier.html'
 			}
 			searchBar.innerHTML = `
 			<form action="${action}" method="get" class="searchbar">
+				<label for="searchbarBar">Varesøk</label>
                 <input class="searchbar" type="search" placeholder="Søk" name="q" id="searchbarBar">
                 <label for="searchbarBar">
 					<button ttype="submit" name="Søk" value="Søk">Søk</button>
@@ -160,11 +161,11 @@ function updateSearchBtn(){
             </form>
 			`;		
 		}else{
-			console.error('Kledeli: Kunne ikkefinne område for søk.');
+			console.error('Kledeli: Kunne ikke finne område for søk.');
 		}
 		
 	}catch(e){
-		console.error('Kledeli: Kunne ikke manipulere Search-knappen: ' + e);
+		console.error('Kledeli: Kunne ikke manipulere destinasjon for søk: ' + e);
 	}	
 }
 
