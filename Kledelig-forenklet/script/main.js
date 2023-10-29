@@ -72,7 +72,7 @@ async function visKontoData(){
 				nameTrgt.innerHTML = `${accountData['firstName']} ${accountData['lastName']}`;
 				emailTrgt.innerHTML = accountData['email'];
 			}else{
-				console.info('Kledeli: Fant ikke id-er displayName eller displayEmail');
+				console.info('Kledeli: Id-er displayName eller displayEmail er ikke tilgjengelig på denne sida, men det er helt OK.');
 			}
 		}catch(e){
 			console.error('Kledeli: Kunne ikke behandle kontodata: ' + e);
