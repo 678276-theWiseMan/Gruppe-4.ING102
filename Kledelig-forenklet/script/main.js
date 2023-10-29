@@ -187,6 +187,13 @@ async function toggleFavoritt(element) {
     element.classList.toggle('active');
 }
 
+function handleKey(event, element) {
+    if (event.key === 'Enter' || event.code === 'Space') {
+        toggleFavoritt(element);
+        event.preventDefault();
+    }
+}
+
 // MEDLEMSKAP
 class Medlemskap {
 	constructor(maxPlagg, antallPlagg, navn){
