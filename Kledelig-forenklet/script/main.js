@@ -147,7 +147,7 @@ function updateSearchBtn(){
 	try {
 		let searchBar = document.querySelector('.searchbar-div');
 		if (!!searchBar){
-			let action = 'varelistevisning.html';
+			let action = 'kategorier.html';
 			if (/\/kontakt\//.test(window.location)){
 				action = '../varelistevisning.html'
 			}
@@ -468,7 +468,7 @@ function fjernFraHandlekurv(thisElement){
 	location.reload()
 }
 
-// Viser hvor mange plagg er det i handlekurven
+// Viser hvor mange plagg det er i handlekurven
 if (minHandlekurv.length > 0) {
 	const antallPlagg = document.getElementById("antallplaggIhk");
 	const showPlagg = document.createElement('h3');
@@ -479,14 +479,4 @@ if (minHandlekurv.length > 0) {
 	const showPlagg = document.createElement('h3');
 	showPlagg.innerText = "Handlekurven er tom! :(";
 	antallPlagg.appendChild(showPlagg);
-}
-
-//index.html Velkomme 
-
-let erMedlem = localStorage.getItem('harMedlemskap');
-console.log(erMedlem);
-
-let velkommenElement = document.getElementById("VelkommenTilKledeli");
-if(erMedlem == 'false'){
-	velkommenElement.remove();
 }
